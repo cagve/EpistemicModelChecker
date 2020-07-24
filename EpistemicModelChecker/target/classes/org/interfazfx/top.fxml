@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Tooltip?>
+<BorderPane fx:id="root" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css" fx:controller="org.interfazfx.Controller">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="1000.0" styleClass="top" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logo" fitHeight="50" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@/org/interfazfx/img/logo.png" />
+               </image>
+            </ImageView>
+           <!-- <Text fill="#eceff1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTop" text="Epistemic Model Checker">
+               <HBox.margin>
+                  <Insets left="10.0" top="11.25" />
+               </HBox.margin>
+            </Text>-->
+            <Region HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="11.0" />
+
+               </HBox.margin>
+            </Region>
+            <Button mnemonicParsing="false" onAction="#selectFile" styleClass="buttonTop" translateY="26.0">
+               <tooltip><Tooltip text="New Model" /></tooltip>
+               <graphic>
+                  <ImageView fx:id="file" fitHeight="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/org/interfazfx/img/mas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="5.0" top="6.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#reload" styleClass="buttonTop" translateY="26.0">
+               <tooltip><Tooltip text="Reload" /></tooltip>
+               <graphic>
+                  <ImageView fx:id="reload" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/org/interfazfx/img/reload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="6.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#help" styleClass="buttonTop" translateY="26.0">
+               <tooltip><Tooltip text="Help" /></tooltip>
+               <graphic>
+                  <ImageView fx:id="info" fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/org/interfazfx/img/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="46.0" top="6.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="center" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="60.0" prefWidth="1100.0" styleClass="center">
+               <children>
+                  <Text fx:id="modelText" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textModel" text="notloaded" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="42.0" top="15.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textFormula" text="φ">
+                        </Text>
+                        <TextField fx:id="formulaField" onAction="#run" prefHeight="26.0" prefWidth="609.0" promptText="Input formula" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#run" prefHeight="19.0" prefWidth="28.0">
+                           <graphic>
+                              <ImageView fx:id="run" disable="true" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/org/interfazfx/img/triangulo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clean">
+                           <graphic>
+                              <ImageView fx:id="clear" fitHeight="150.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="button" translateY="-2.0">
+                                 <image>
+                                    <Image url="@/org/interfazfx/img/basura.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" right="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="15.0" />
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <items>
+                        <TextArea fx:id="returnArea" prefHeight="200.0" prefWidth="200.0" styleClass="image-view" />
+                        <TabPane fx:id="tabPane" prefHeight="535.0" prefWidth="548.0" styleClass="center" tabClosingPolicy="UNAVAILABLE">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding></TabPane>
+                     </items>
+                  </SplitPane>
+                  <Region prefHeight="200.0" prefWidth="15.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="17.0" prefWidth="1100.0" styleClass="bot" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorLabel" styleClass="labelBot" text="Model not loaded">
+               <padding>
+                  <Insets left="26.0" />
+               </padding>
+               <graphic>
+                  <ImageView fx:id="adImg" fitHeight="150.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/org/interfazfx/img/ad.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="pathLabel" styleClass="labelBot">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+         </children></HBox>
+      </bottom>
+</BorderPane>
