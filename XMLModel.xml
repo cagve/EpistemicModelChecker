@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><model><worlds><world id="w0"><atoms>p</atoms></world><world id="w1"/><world id="w2"/></worlds><agents><a>a</a><a>b</a><a>c</a><a>d</a></agents><rels><accRel><agent>a</agent><first>0</first><second>1</second></accRel><accRel><agent>a</agent><first>1</first><second>2</second></accRel></rels></model>
-=======
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><model><worlds><world id="w0"><atoms>q</atoms></world><world id="w1"/><world id="w2"/></worlds><agents><a>a</a></agents><rels><accRel><agent>a</agent><first>1</first><second>2</second></accRel><accRel><agent>a</agent><first>0</first><second>1</second></accRel></rels></model>
->>>>>>> 6ef5c65f7f8fde82ce3d538b06e600fa56dace5e
