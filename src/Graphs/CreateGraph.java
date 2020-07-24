@@ -89,7 +89,7 @@ public class CreateGraph {
 		
 		}
 		
-		graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
+		graph.addAttribute("ui.stylesheet", "url('file:.res/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
         graph.addAttribute("ui.antialias");
       
         Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
@@ -158,7 +158,7 @@ public class CreateGraph {
 			}visu.setSimpleName(currentWorld, currentWorld);
 		i++;
 		}
-		graph.addAttribute("ui.stylesheet", "url('file:style/style.css')"); //.res/style.css Para compilar .jar
+		graph.addAttribute("ui.stylesheet", "url('file:.res/style.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
         
         //COMPLETAR CON BOTONES
