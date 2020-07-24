@@ -20,11 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32ff5474-6c54-45d9-9f06-ee6c5b7367af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__graphstream_algo_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__graphstream_core_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gs_algo_1_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shade/epistemicfx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shade/epistemicfx.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphs/CreateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs/CreateGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/EpistemicKripkeModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/EpistemicParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/EpistemicReasoner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/FormulaManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/Knowledge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/PosKnowledge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/ReadTXT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/Traductor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpistemicChecker/XMLManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/CreateGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/GraphVisualitation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/javac.20200514_175023.args" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/javac.20200514_175045.args" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphs/style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntefazFXML/SampleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntefazFXML/SwingFx.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/graph/CreateGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/graph/CreateGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/graph/CreateGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/graph/CreateGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/epistemicfx-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/epistemicfx-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +57,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1f8nLExB4kzNo7fISBVcmR4uvtb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +72,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/gs-ui-1.3.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.5137931" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,9 +105,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1" y="-18" width="1026" height="757" key="SettingsEditor" timestamp="1595608773464">
+    <state x="333" y="73" width="593" height="499" key="FileChooserDialogImpl" timestamp="1595614110780">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="-1" y="-18" width="1026" height="757" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1595608773464" />
+    <state x="333" y="73" width="593" height="499" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1595614110780" />
+    <state width="1322" height="186" key="GridCell.Tab.0.bottom" timestamp="1595617190165">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="186" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595617190165" />
+    <state width="1322" height="186" key="GridCell.Tab.0.center" timestamp="1595617190164">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="186" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595617190164" />
+    <state width="1322" height="186" key="GridCell.Tab.0.left" timestamp="1595617190164">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="186" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595617190164" />
+    <state width="1322" height="186" key="GridCell.Tab.0.right" timestamp="1595617190165">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="186" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595617190165" />
+    <state x="135" y="-7" width="1026" height="757" key="SettingsEditor" timestamp="1595614689322">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="135" y="-7" width="1026" height="757" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1595614689322" />
+    <state x="475" y="-45" width="393" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595615611270">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="475" y="-45" width="393" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1595615611270" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1595614680761">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1595614680761" />
   </component>
 </project>

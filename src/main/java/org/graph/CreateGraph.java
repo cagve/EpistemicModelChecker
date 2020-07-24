@@ -10,8 +10,6 @@ import org.graphstream.graph.Graph;
 import org.graphstream.graph.implementations.MultiGraph;
 import org.graphstream.ui.swingViewer.ViewPanel;
 import org.graphstream.ui.view.Viewer;
-import org.ojalgo.optimisation.Optimisation;
-import scala.Char;
 
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
@@ -82,7 +80,7 @@ public class CreateGraph {
 		
 		}
 		
-		graph.addAttribute("ui.stylesheet", "url('file:/home/carlos/eclipse-workspace/epistemicfx/src/main/resources/org/graph/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
+		graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
         graph.addAttribute("ui.antialias");
       
         Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
@@ -143,8 +141,7 @@ public class CreateGraph {
 			}visu.setSimpleName(currentWorld, currentWorld);
 		i++;
 		}
-		graph.addAttribute("ui.stylesheet", "url('file:\n" +
-				"/home/carlos/eclipse-workspace/epistemicfx/src/main/resources/org/graph/graphstyle.css')"); //.res/style.css Para compilar .jar
+		graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
 
         //COMPLETAR CON BOTONES
