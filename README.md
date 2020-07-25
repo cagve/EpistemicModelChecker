@@ -20,16 +20,16 @@
 estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*.
 
 
-## Primeros pasos {#primeros}
-### Dependencias{#dependencias}
+## Primeros pasos <a name="prmieros"></a>
+### Dependencias <a name="dependencias"></a>
 Para poder ejecutar **EMC** basta con tener instalado una versión java superior a JAVA 11. La última versión de puede ser descargada en el siguente enlace: [Java 14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html). 
 Descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
 
-### Instalación{#install}
+### Instalación<a name="install"></a>
 
 
-## Manual de uso {#manual}
-### Interfaz {#interfaz}
+## Manual de uso <a name="manual"></a>
+### Interfaz <a name="interfaz"></a>
 <p align="center">
   <img src="interfaz.png" alt="EMC">
 </p>
@@ -42,7 +42,7 @@ Descargar y compilar el código se requiere además de la última versión de [J
 7. Área de texto donde se muestra el resultado
 8. Área gráfica donde se muestra el grafo del modelo
 
-### Introducción de modelos{#modelo}
+### Introducción de modelos <a name="modelo"></a>
 La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta.
 ```
 W={w0,w1,w2}
@@ -57,7 +57,7 @@ V(r)={w0}
 * El número de agentes está restringido a 4; a, b, c y d.
 * El dominio de los átomos interpretables por **EMC** es: {p,q,r,s,t,u,v,w,x,y,z}
 
-### Introducción de fórmulas {#formula}
+### Introducción de fórmulas <a name="formula"></a>
 La sintaxis para la introducción de fórmulas es la siguiente. 
 
 | Operador     | Ejemplo notación  clásica  | Ejemplo notación EMC 
@@ -72,10 +72,10 @@ La sintaxis para la introducción de fórmulas es la siguiente.
 
 *Es importante recalcar que los operadores monádicos deben escribirse siempre manteniendo los paréntesis que delimiten la fórmula a la que afectan
 
-## Desarrolladores {#community}
+## Desarrolladores <a name="community"></a>
 El proyecto ha sido desarrollado por 
 * Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
-## Licencia {#licence}
+## Licencia <a name="licence"></a>
 EMC está licenciado bajo GNUv3, véase:[LICENCE](https://github.com/CaAgVe/EpistemicModelChecker/blob/Release_1.01/licence) 
