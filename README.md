@@ -27,8 +27,8 @@ Descargar y compilar el código se requiere además de la última versión de [J
 ### Instalación{#install}
 
 
-## Manual de uso{#manual}
-### Interfaz{#interfaz}
+## Manual de uso {#manual}
+### Interfaz {#interfaz}
 <p align="center">
   <img src="interfaz.png" alt="EMC">
 </p>
