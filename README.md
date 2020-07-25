@@ -20,7 +20,7 @@
 estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*.
 
 
-## Primeros pasos <a name="prmieros"></a>
+## Primeros pasos <a name="primeros"></a>
 ### Dependencias <a name="dependencias"></a>
 Para poder ejecutar **EMC** basta con tener instalado una versión java superior a JAVA 11. La última versión de puede ser descargada en el siguente enlace: [Java 14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html). 
 Descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
@@ -33,14 +33,15 @@ Descargar y compilar el código se requiere además de la última versión de [J
 <p align="center">
   <img src="interfaz.png" alt="EMC">
 </p>
-* 1. Introducir nuevo modelo
-* 2. Recargar modelo
-* 3. Ayuda
-* 4. Campo de texto donde introducir la fórmula
-* 5. Ejecutar el verificador
-* 6. Limpiar interfaz
-* 7. Área de texto donde se muestra el resultado
-* 8. Área gráfica donde se muestra el grafo del modelo
+
+ 1. Introducir nuevo modelo
+ 2. Recargar modelo
+ 3. Ayuda
+ 4. Campo de texto donde introducir la fórmula
+ 5. Ejecutar el verificador
+ 6. Limpiar interfaz
+ 7. Área de texto donde se muestra el resultado
+ 8. Área gráfica donde se muestra el grafo del modelo
 
 ### Introducción de modelos <a name="modelo"></a>
 La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta.
