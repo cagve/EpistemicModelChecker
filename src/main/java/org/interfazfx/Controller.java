@@ -301,7 +301,7 @@ public class Controller {
                 for(int j=0;j<newList.size();j++) {
                     if(newList.get(j).getClass()==neg.getClass()) {
                         currentFormula = t.convertNormal(newList.get(j).getFormula().toString());
-                        finalList.add("��("+currentFormula+")");
+                        finalList.add("¬("+currentFormula+")");
                     }else {
                         currentFormula = t.convertNormal(newList.get(j).toString());
                         finalList.add(currentFormula);
