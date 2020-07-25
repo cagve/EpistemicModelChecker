@@ -29,6 +29,9 @@ Descargar y compilar el código se requiere además de la última versión de [J
 
 ## Manual de uso
 ### Interfaz
+<p align="center">
+  <img src="interfaz.png" alt="EMC">
+</p>
 1. Introducir nuevo modelo
 2. Recargar modelo
 3. Ayuda
