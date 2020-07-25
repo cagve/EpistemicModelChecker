@@ -23,7 +23,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("org/interfazfx/top.fxml"));
-        Scene scene = new Scene(root,400,400);
+        Scene scene = new Scene(root,1000,700);
         primaryStage.setTitle("EMC " );
         primaryStage.setScene(scene);
         primaryStage.show();

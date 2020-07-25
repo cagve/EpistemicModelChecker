@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/epistemicfx.iml" filepath="$PROJECT_DIR$/epistemicfx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EpistemicModelChecker.iml" filepath="$PROJECT_DIR$/.idea/EpistemicModelChecker.iml" />
     </modules>
   </component>
 </project>
