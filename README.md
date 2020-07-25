@@ -77,4 +77,4 @@ El proyecto ha sido desarrollado por
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
 ## Licencia
-EMC está licenciado bajo GNUv3, véase: 
+EMC está licenciado bajo GNUv3, véase:[LICENCE](https://github.com/CaAgVe/EpistemicModelChecker/blob/Release_1.01/licence) 
