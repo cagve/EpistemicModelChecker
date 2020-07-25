@@ -33,14 +33,14 @@ Descargar y compilar el código se requiere además de la última versión de [J
 <p align="center">
   <img src="interfaz.png" alt="EMC">
 </p>
-1. Introducir nuevo modelo
-2. Recargar modelo
-3. Ayuda
-4. Campo de texto donde introducir la fórmula
-5. Ejecutar el verificador
-6. Limpiar interfaz
-7. Área de texto donde se muestra el resultado
-8. Área gráfica donde se muestra el grafo del modelo
+* 1. Introducir nuevo modelo
+* 2. Recargar modelo
+* 3. Ayuda
+* 4. Campo de texto donde introducir la fórmula
+* 5. Ejecutar el verificador
+* 6. Limpiar interfaz
+* 7. Área de texto donde se muestra el resultado
+* 8. Área gráfica donde se muestra el grafo del modelo
 
 ### Introducción de modelos <a name="modelo"></a>
 La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta.
