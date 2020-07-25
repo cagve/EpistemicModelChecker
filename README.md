@@ -1,34 +1,34 @@
 <p align="center">
   <img src="banner.png" alt="EMC">
 </p>
-##  Índice
+## Índice
 
 * [Introducción](#introduction)
-* [Primeros Pasos](#getting-help)
-	* [Dependencias](#getting-started)
-	 * [Instalación](#dependencies)
- * [Manual de uso](#building-from-source)
-	 * [Interfaz](#configuration)
-	  * [Introducción de modelos](#configuration)
-	  * [Introducción de fórmulas](#running)
+* [Primeros Pasos](#primeros)
+	* [Dependencias](#dependencias)
+	 * [Instalación](#install)
+ * [Manual de uso](#manual)
+	 * [Interfaz](#interfaz)
+	  * [Introducción de modelos](#modelo)
+	  * [Introducción de fórmulas](#formula)
 * [Desarrolladores](#community)
 * [Licencia](#license)
 
-## Introducción
+## Introducción {#introduction}
 **EpistemicModelChecker (EMC)** un programa capaz de evaluar el
 estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*.
 
 
-## Primeros pasos
-### Dependencias
+## Primeros pasos {#primeros}
+### Dependencias{#dependencias}
 Para poder ejecutar **EMC** basta con tener instalado una versión java superior a JAVA 11. La última versión de puede ser descargada en el siguente enlace: [Java 14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html). 
 Descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
 
-### Instalación
+### Instalación{#install}
 
 
-## Manual de uso
-### Interfaz
+## Manual de uso{#manual}
+### Interfaz{#interfaz}
 <p align="center">
   <img src="interfaz.png" alt="EMC">
 </p>
@@ -41,7 +41,7 @@ Descargar y compilar el código se requiere además de la última versión de [J
 7. Área de texto donde se muestra el resultado
 8. Área gráfica donde se muestra el grafo del modelo
 
-### Introducción de modelos
+### Introducción de modelos{#modelo}
 La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta.
 ```
 W={w0,w1,w2}
@@ -56,7 +56,7 @@ V(r)={w0}
 * El número de agentes está restringido a 4; a, b, c y d.
 * El dominio de los átomos interpretables por **EMC** es: {p,q,r,s,t,u,v,w,x,y,z}
 
-### Introducción de fórmulas 
+### Introducción de fórmulas {#formula}
 La sintaxis para la introducción de fórmulas es la siguiente. 
 
 | Operador     | Ejemplo notación  clásica  | Ejemplo notación EMC 
@@ -71,10 +71,10 @@ La sintaxis para la introducción de fórmulas es la siguiente.
 
 *Es importante recalcar que los operadores monádicos deben escribirse siempre manteniendo los paréntesis que delimiten la fórmula a la que afectan
 
-## Contacto
+## Desarrolladores {#community}
 El proyecto ha sido desarrollado por 
 * Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
-## Licencia
+## Licencia {#licence}
 EMC está licenciado bajo GNUv3, véase:[LICENCE](https://github.com/CaAgVe/EpistemicModelChecker/blob/Release_1.01/licence) 
