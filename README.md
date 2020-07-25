@@ -1,7 +1,8 @@
 <p align="center">
   <img src="banner.png" alt="EMC">
 </p>
-## Índice
+
+## Indice
 
 * [Introducción](#introduction)
 * [Primeros Pasos](#primeros)
@@ -14,7 +15,7 @@
 * [Desarrolladores](#community)
 * [Licencia](#license)
 
-## Introducción {#introduction}
+## Introducción <a name="introduction"></a>
 **EpistemicModelChecker (EMC)** un programa capaz de evaluar el
 estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*.
 
