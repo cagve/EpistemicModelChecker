@@ -1,12 +1,16 @@
 package org.interfazfx;
 
 import javafx.application.Application;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
@@ -27,6 +31,10 @@ public class App extends Application {
         primaryStage.setTitle("EMC " );
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        BufferedImage masB = ImageIO.read(ClassLoader.getSystemResource( "org/interfazfx/img/48.png" ) );
+        Image masImg = SwingFXUtils.toFXImage(masB, null);
+        primaryStage.getIcons().add(masImg);
     }
 
   /**

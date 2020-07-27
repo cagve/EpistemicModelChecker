@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="EMC">
+  <img src="readme/banner.png" alt="EMC">
 </p>
 
 ## Indice
@@ -17,7 +17,10 @@
 
 ## Introducción <a name="introduction"></a>
 **EpistemicModelChecker (EMC)** un programa capaz de evaluar el
-estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*.
+estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*. Para el desarrollo del 
+programa ha sido esencial el uso de dos librerías; [Tweety project](https://tweetyproject.org/) y [GraphStream](http://graphstream-project.org/). Sin embargo, **EMC** no es sino el
+primer paso de un proyecto en desarrollo que pretende mejorar las funcionalidades de dicha herramienta. Es por ello por lo que toda sugerencia, advertencia de bug, etc. Es más que 
+bienvenida. Para ello bien se puede contactar a través del [email](#mail) aportado más abajo, así como abriendo una entrada a través del siguiente enlace https://github.com/cagve/EpistemicModelChecker/issues.
 
 
 ## Primeros pasos <a name="primeros"></a>
@@ -31,7 +34,7 @@ Descargar y compilar el código se requiere además de la última versión de [J
 ## Manual de uso <a name="manual"></a>
 ### Interfaz <a name="interfaz"></a>
 <p align="center">
-  <img src="interfaz.png" alt="EMC">
+  <img src="readme/interfaz.png" alt="EMC">
 </p>
 
  1. Introducir nuevo modelo
@@ -75,7 +78,7 @@ La sintaxis para la introducción de fórmulas es la siguiente.
 
 ## Desarrolladores <a name="community"></a>
 El proyecto ha sido desarrollado por 
-* Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
+* Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)<a name="mail"></a>
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
 ## Licencia <a name="licence"></a>

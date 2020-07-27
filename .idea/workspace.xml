@@ -19,7 +19,28 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e034e0f9-b238-4a1b-a6ef-fda67dd7d87f" name="Default Changelist" comment="" />
+    <list default="true" id="e034e0f9-b238-4a1b-a6ef-fda67dd7d87f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shade/EMC_1.01.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shade/epistemicfx.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shade/launch_emc.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/epistemic/EpistemicModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/epistemic/EpistemicModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/interfazfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/interfazfx/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/interfazfx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/interfazfx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/interfazfx/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/interfazfx/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Ranchers-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Santana.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Ranchers-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Santana.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/epistemicfx-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/epistemicfx-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,21 +90,29 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="180" key="GridCell.Tab.0.bottom" timestamp="1595691296629">
+    <state width="1322" height="179" key="GridCell.Tab.0.bottom" timestamp="1595776673875">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595691296629" />
-    <state width="1322" height="180" key="GridCell.Tab.0.center" timestamp="1595691296629">
+    <state width="1322" height="179" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595776673875" />
+    <state width="1322" height="179" key="GridCell.Tab.0.center" timestamp="1595776673873">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595691296629" />
-    <state width="1322" height="180" key="GridCell.Tab.0.left" timestamp="1595691296628">
+    <state width="1322" height="179" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595776673873" />
+    <state width="1322" height="179" key="GridCell.Tab.0.left" timestamp="1595776673871">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595691296628" />
-    <state width="1322" height="180" key="GridCell.Tab.0.right" timestamp="1595691296629">
+    <state width="1322" height="179" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595776673871" />
+    <state width="1322" height="179" key="GridCell.Tab.0.right" timestamp="1595776673874">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595691296629" />
+    <state width="1322" height="179" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595776673874" />
+    <state x="455" y="-163" width="419" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595775490768">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="455" y="-163" width="419" height="604" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1595775490768" />
+    <state x="394" y="0" width="579" height="768" key="find.popup" timestamp="1595775053055">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="394" y="0" width="579" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1595775053055" />
   </component>
 </project>

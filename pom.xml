@@ -6,7 +6,6 @@
     <groupId>org.interfazfx</groupId>
     <artifactId>epistemicfx</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,7 +37,6 @@
             <artifactId>javafx-controls</artifactId>
             <version>13</version>
         </dependency>
-        <!-- Uncomment for cross-platform fat jar-->
         <dependency>
             <groupId>graphstream</groupId>
             <artifactId>gui</artifactId>
@@ -94,7 +92,22 @@
                     <compress>2</compress>
                 </configuration>
             </plugin>
+	    <!-- Plugin para crear paquete deb 
             <plugin>
+                <groupId>io.solit.maven</groupId>
+                <artifactId>deb-maven-plugin</artifactId>
+                <version>1.0-RC2</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <dependencyDir></dependencyDir>
+                    <packageName>${project.artifactId}</packageName>
+                    <stageDir>${project.build.directory}/deb</stageDir>
+                    <maintainer>Carlos Aguilera Ventura</maintainer>
+                    <maintainerEmail>carlos.aguilera@gmail.com</maintainerEmail>
+                </configuration>
+	</plugin>-->
+        <!-- PLugin para compilar jar multiplataforma
+        <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.0</version>
@@ -116,7 +129,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+	</plugin>-->
         </plugins>
     </build>
 </project>
