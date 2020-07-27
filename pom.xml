@@ -1,3 +1,4 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -5,7 +6,6 @@
     <groupId>org.interfazfx</groupId>
     <artifactId>epistemicfx</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,27 +20,6 @@
             <groupId>net.sf.tweety</groupId>
             <artifactId>tweety-full</artifactId>
             <version>1.17</version>
-        </dependency>
-        <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>gs-algo</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/gs-algo-1.3.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>gs-ui</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/gs-ui-1.3.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>gs-core</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/gs-core-1.3.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -58,8 +37,21 @@
             <artifactId>javafx-controls</artifactId>
             <version>13</version>
         </dependency>
-        <!-- Uncomment for cross-platform fat jar-->
-
+        <dependency>
+            <groupId>graphstream</groupId>
+            <artifactId>gui</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>graphstream</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>graphstream</groupId>
+            <artifactId>algo</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
@@ -97,9 +89,25 @@
                 <version>0.0.3</version>
                 <configuration>
                     <mainClass>org.interfazfx.App</mainClass>
+                    <compress>2</compress>
                 </configuration>
             </plugin>
+	    <!-- Plugin para crear paquete deb 
             <plugin>
+                <groupId>io.solit.maven</groupId>
+                <artifactId>deb-maven-plugin</artifactId>
+                <version>1.0-RC2</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <dependencyDir></dependencyDir>
+                    <packageName>${project.artifactId}</packageName>
+                    <stageDir>${project.build.directory}/deb</stageDir>
+                    <maintainer>Carlos Aguilera Ventura</maintainer>
+                    <maintainerEmail>carlos.aguilera@gmail.com</maintainerEmail>
+                </configuration>
+	</plugin>-->
+        <!-- PLugin para compilar jar multiplataforma
+        <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.0</version>
@@ -114,15 +122,14 @@
                             <shadedClassifierName>project-classifier</shadedClassifierName>
                             <outputFile>shade\${project.artifactId}.jar</outputFile>
                             <transformers>
-                                <transformer implementation=
-                                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                             <mainClass>org.interfazfx.Launcher</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+	</plugin>-->
         </plugins>
     </build>
 </project>

@@ -1,6 +1,8 @@
 package org.epistemic;
 
-import java.util.ArrayList;
+import scala.Char;
+
+import java.util.*;
 
 /**
  * Clase que construye un modelo epistémico
@@ -82,6 +84,14 @@ public class EpistemicModel {
         return atomList;
     }
 
+
+
+    public ArrayList<Character> removeDuplicate(ArrayList<Character> yourList){
+        Set<Character> set = new HashSet<Character>(yourList);
+        yourList.clear();
+        yourList.addAll(set);
+        return yourList;
+    }
     /**
      * Devuelve el resultado de los átomos que son verdaderos en el mundo
      * @param world
@@ -96,6 +106,7 @@ public class EpistemicModel {
                 resultList.add(atomList.get(i));
             }
         }
+        resultList=this.removeDuplicate(resultList);
         return resultList;
     }
 

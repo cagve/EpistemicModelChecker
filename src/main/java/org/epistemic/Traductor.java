@@ -56,7 +56,7 @@ public class Traductor {
         String formulaTraducida = cad;
         formulaTraducida = formulaTraducida.replace("\\land","&&");
         formulaTraducida = formulaTraducida.replace("\\to","=>");
-        formulaTraducida = formulaTraducida.replace("\\leftrightarrow","<=>");
+        formulaTraducida = formulaTraducida.replace("\\eq","<=>");
         formulaTraducida = formulaTraducida.replace("\\lor","||");
         formulaTraducida = formulaTraducida.replace("\\lnot","!");
         formulaTraducida = formulaTraducida.replace("*","Ka");

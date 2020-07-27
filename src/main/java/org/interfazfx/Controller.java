@@ -19,6 +19,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import net.sf.tweety.commons.ParserException;
 import net.sf.tweety.logics.commons.syntax.Predicate;
 import net.sf.tweety.logics.commons.syntax.RelationalFormula;
 import net.sf.tweety.logics.fol.syntax.FolSignature;
@@ -205,13 +207,13 @@ public class Controller {
                 + "Conjunction - \\land\n"
                 + "Disjunction - \\lor\n"
                 + "Implication - \\to\n"
-                + "Equivalence - \\leftrightarrow\n "
+                + "Equivalence - \\eq\n "
                 + "Negation* - \\lnot(formula)\n"
                 + "Knowledge* - Ka(formula)\n"
-                + "PosKnowledge* -Mb(formula)\n"
+                + "PosKnowledge* - Mb(formula)\n"
                 + "*IMPORTANT, you need to use the parenthesis\n\n"
                 + "If you need some help, go to the link below:"
-                + "http://unarduinoenfilosofia.xyz \n"
+                + "https://github.com/cagve/EpistemicModelChecker \n"
         );
 
 
@@ -224,7 +226,7 @@ public class Controller {
     /**
      * Ejecuta el verificador epistémico.
      */
-    public void run() throws ParserConfigurationException, TransformerException, IOException {
+    public void run() {
         String form = formulaField.getText();
         String filePath = pathLabel.getText();
         if(form.isEmpty()) {
@@ -233,27 +235,21 @@ public class Controller {
             this.loadAlertError("Not found model", "Please insert a model");
         }else {
             this.cleanGraph();
-            String cad;
+            String cad="";
             Reasoner reasoner = new Reasoner();
             System.out.println(filePath);
-            cad =reasoner.runReasoner(form, filePath);
-            cad=cad+"\n -----------------------------------------------------";
-           cad=cad+this.createMultiGraph();
-
-       //     } catch (ParserException e) {
-       //         // TODO Auto-generated catch block
-       //         this.loadAlertError("Not found formula", "Please insert a valid formula");
-       //         e.printStackTrace();
-       //     } catch (IOException e) {
-       //         // TODO Auto-generated catch block
-       //         e.printStackTrace();
-       //     } catch (ParserConfigurationException e) {
-       //         // TODO Auto-generated catch block
-       //         e.printStackTrace();
-       //     } catch (TransformerException e) {
-       //         // TODO Auto-generated catch block
-       //         e.printStackTrace();
-       //     }
+            try {
+                cad =reasoner.runReasoner(form, filePath);
+                cad=cad+"\n -----------------------------------------------------";
+                cad=cad+this.createMultiGraph();
+            } catch (ParserException e) {
+                // TODO Auto-generated catch block
+                this.loadAlertError("Not found formula", "Please insert a valid formula");
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
             returnArea.setText(cad);
         }
     }
@@ -301,7 +297,7 @@ public class Controller {
                 for(int j=0;j<newList.size();j++) {
                     if(newList.get(j).getClass()==neg.getClass()) {
                         currentFormula = t.convertNormal(newList.get(j).getFormula().toString());
-                        finalList.add("��("+currentFormula+")");
+                        finalList.add("¬("+currentFormula+")");
                     }else {
                         currentFormula = t.convertNormal(newList.get(j).toString());
                         finalList.add(currentFormula);
