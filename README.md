@@ -26,9 +26,12 @@ bienvenida. Para ello bien se puede contactar a través del [email](#mail) aport
 ## Primeros pasos <a name="primeros"></a>
 ### Dependencias <a name="dependencias"></a>
 Para poder ejecutar **EMC** basta con tener instalado una versión java superior a JAVA 11. La última versión de puede ser descargada en el siguente enlace: [Java 14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html). 
-Descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
+
+Para descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
 
 ### Instalación<a name="install"></a>
+
+Para instalar **EMC** basta con descargar el archivo correspondiente para su sistema operativo en el siguiente enlace; [Descargar instaladores](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1).
 
 
 ## Manual de uso <a name="manual"></a>
@@ -47,7 +50,7 @@ Descargar y compilar el código se requiere además de la última versión de [J
  8. Área gráfica donde se muestra el grafo del modelo
 
 ### Introducción de modelos <a name="modelo"></a>
-La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta.
+La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta. 
 ```
 W={w0,w1,w2}
 Ra={<w0,w1>,<w2,w2>}
@@ -60,6 +63,7 @@ V(r)={w0}
 * Se pueden crear hasta un máximo de 10 mundos, empezando siempre por w0.
 * El número de agentes está restringido a 4; a, b, c y d.
 * El dominio de los átomos interpretables por **EMC** es: {p,q,r,s,t,u,v,w,x,y,z}
+* Se pueden descargar ejemplos en el siguiente enlace: [ejemplo de modelos](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1) 
 
 ### Introducción de fórmulas <a name="formula"></a>
 La sintaxis para la introducción de fórmulas es la siguiente. 
