@@ -9,9 +9,10 @@
 	* [Dependencias](#dependencias)
 	 * [Instalación](#install)
  * [Manual de uso](#manual)
-	 * [Interfaz](#interfaz)
+	  * [Interfaz](#interfaz)
 	  * [Introducción de modelos](#modelo)
 	  * [Introducción de fórmulas](#formula)
+    * [Ejemplo de uso](#ejemplo)
 * [Desarrolladores](#community)
 * [Licencia](#license)
 
@@ -79,6 +80,11 @@ La sintaxis para la introducción de fórmulas es la siguiente.
 | Dual del conocimeinto*|  M<sub>a</sub>p | Ma( p ) |
 
 *Es importante recalcar que los operadores monádicos deben escribirse siempre manteniendo los paréntesis que delimiten la fórmula a la que afectan
+
+#### Ejemplo de uso
+<p align="center">
+  <img src="readme/corte.gif" alt="EMC">
+</p>
 
 ## Desarrolladores <a name="community"></a>
 El proyecto ha sido desarrollado por 
