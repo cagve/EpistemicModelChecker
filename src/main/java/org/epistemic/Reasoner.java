@@ -15,7 +15,6 @@ import java.io.IOException;
 
 public class Reasoner {
 private Predicate q = new Predicate("q");
-
 	private char a;
 	private RelationalFormula atom = new FolAtom(q);
 	private Negation neg = new Negation(atom);
