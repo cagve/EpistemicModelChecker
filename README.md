@@ -2,10 +2,9 @@
   <img src="readme/banner.png" alt="EMC">
 </p>
 
-## Index 
-
+## Index <a href="README_ES.md"><img src="readme/espana.png" alt="español"></a> 
 * [Introduction](#introduction)
-* [First Steps](#primeros)
+* [Getting Startted](#primeros)
 	* [Dependencies](#dependencias)
     * [Installation](#install)
  * [Use](#manual)
@@ -22,7 +21,7 @@ The chosen evaluation process is the one that the *model checking algorithm desc
 [Tweety project](https://tweetyproject.org/) y [GraphStream](http://graphstream-project.org/). However, **EMC** is the first step of a biggest project in development which pretends to improve and add new tools to **EMC**. 
 Any suggestion, bug detection, etc will be appreciate. You can open an issue in github (https://github.com/cagve/EpistemicModelChecker/issues.) or mail me.
 
-## First steps <a name="primeros"></a>
+## Getting startted <a name="primeros"></a>
 ### Dependencies <a name="dependencias"></a>
 To execute **EMC** yo need to haven an older version than JAVA 11.
 However if you want to download the code and compile it, you will need the las version of [JavaFX](https://gluonhq.com/products/javafx/)

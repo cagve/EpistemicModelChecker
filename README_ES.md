@@ -2,7 +2,7 @@
   <img src="readme/banner.png" alt="EMC">
 </p>
 
-## Indice
+## Índice <a href="README.md"><img src="readme/uk.png" alt="English"></a> 
 
 * [Introducción](#introduction)
 * [Primeros Pasos](#primeros)
