@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class WorldSet {
     private final ArrayList<World> worldSet;
-
-    /**
+/**
      * Constructor
      * @param worldSet
      */
