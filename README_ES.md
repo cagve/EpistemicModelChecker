@@ -87,8 +87,9 @@ La sintaxis para la introducción de fórmulas es la siguiente.
 </p>
 
 ## Desarrolladores <a name="community"></a>
-El proyecto ha sido desarrollado por 
+El proyecto ha sido desarrollado para un trabajo final de grado (TFG) en el departamento de filosofía de la Universidad de Málaga por:
 * Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)<a name="mail"></a>
+Bajo la supervisión de:
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
 ## Licencia <a name="licence"></a>

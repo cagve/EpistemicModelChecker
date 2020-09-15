@@ -84,8 +84,9 @@ Check the syntaxis of the formula in this table.
 </p>
 
 ## Developers <a name="community"></a>
-The project has been developed by;
+The project has been developed for a final degree work (TFG) in the philosophy department of the University of Málaga by:
 * Carlos Aguilera Ventura: carlos.aguilera13416@gmail.com<a name="mail"></a>
+Supervised by:
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
 ## Licencia <a name="licence"></a>
