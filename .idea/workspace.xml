@@ -21,9 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="e034e0f9-b238-4a1b-a6ef-fda67dd7d87f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/epistemic/Reasoner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/epistemic/Reasoner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/EpistemicParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/FormulaManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/FormulaManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/Knowledge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/Knowledge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/PosKnowledge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/PosKnowledge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/ReadTxt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/ReadTxt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/Reasoner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/Reasoner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/Relation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/Relation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/RelationSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/RelationSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/Traductor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/Traductor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/epistemic/WorldSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/epistemic/WorldSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/graph/CreateGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/graph/CreateGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/graph/GraphVisualitation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/graph/GraphVisualitation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/interfazfx/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/interfazfx/Launcher.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

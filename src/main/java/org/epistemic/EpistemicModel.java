@@ -1,7 +1,4 @@
 package org.epistemic;
-
-import scala.Char;
-
 import java.util.*;
 
 /**
@@ -29,7 +26,7 @@ public class EpistemicModel {
      * @return
      */
     public RelationSet getRelationOf(World world, char agent) {
-        ArrayList<Relation> relationArraySet= new ArrayList();
+        ArrayList<Relation> relationArraySet= new ArrayList<Relation>();
         for (int i = 0; i < relationSet.getRelationSet().size(); i++) {
             if (relationSet.getRelationSet().get(i).getFirst() == world && relationSet.getRelationSet().get(i).getAgent() == agent) {
                 relationArraySet.add(relationSet.getRelationSet().get(i));

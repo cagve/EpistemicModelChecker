@@ -2,56 +2,53 @@
   <img src="readme/banner.png" alt="EMC">
 </p>
 
-## Indice
+## Index <a href="README_ES.md"><img src="readme/espana.png" alt="español"></a> 
+* [Introduction](#introduction)
+* [Getting Started](#primeros)
+	* [Dependencies](#dependencias)
+    * [Installation](#install)
+ * [Use](#manual)
+    * [Interface](#interfaz)
+    * [Model input](#modelo)
+    * [Formula input](#formula)
+    * [Usage example](#ejemplo)
+* [Developers](#community)
+* [Licence](#licence)
 
-* [Introducción](#introduction)
-* [Primeros Pasos](#primeros)
-	* [Dependencias](#dependencias)
-	 * [Instalación](#install)
- * [Manual de uso](#manual)
-	  * [Interfaz](#interfaz)
-	  * [Introducción de modelos](#modelo)
-	  * [Introducción de fórmulas](#formula)
-    * [Ejemplo de uso](#ejemplo)
-* [Desarrolladores](#community)
-* [Licencia](#license)
+## Introduction <a name="introduction"></a>
+**EpistemicModelChecker (EMC)** is a software tool for determining the truth value of modal formulas in Kripke-style multi-agent models.
+The used evaluation process is the one described by the *model checking algorithm*. In the development of the program two libraries have been used:
+[Tweety project](https://tweetyproject.org/) y [GraphStream](http://graphstream-project.org/). **EMC** is the first stage of a wider project under development. 
+Any suggestion, bug detection, etc will be appreciated. You can post an issue in github (https://github.com/cagve/EpistemicModelChecker/issues) or send a [mail](#mail). 
 
-## Introducción <a name="introduction"></a>
-**EpistemicModelChecker (EMC)** un programa capaz de evaluar el
-estatus semántico de una fórmula epistémica en modelos multiagentes. El proceso de evaluación utilizado es el que describe el algoritmo *model checking*. Para el desarrollo del 
-programa ha sido esencial el uso de dos librerías; [Tweety project](https://tweetyproject.org/) y [GraphStream](http://graphstream-project.org/). Sin embargo, **EMC** no es sino el
-primer paso de un proyecto en desarrollo que pretende mejorar las funcionalidades de dicha herramienta. Es por ello por lo que toda sugerencia, advertencia de bug, etc. Es más que 
-bienvenida. Para ello bien se puede contactar a través del [email](#mail) aportado más abajo, así como abriendo una entrada a través del siguiente enlace https://github.com/cagve/EpistemicModelChecker/issues.
-
-
-## Primeros pasos <a name="primeros"></a>
-### Dependencias <a name="dependencias"></a>
-Para poder ejecutar **EMC** basta con tener instalado una versión java superior a JAVA 11. La última versión de puede ser descargada en el siguente enlace: [Java 14](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html). 
-
-Para descargar y compilar el código se requiere además de la última versión de [JavaFX](https://gluonhq.com/products/javafx/)
-
-### Instalación<a name="install"></a>
-
-Para instalar **EMC** basta con descargar el archivo correspondiente para su sistema operativo en el siguiente enlace; [Descargar instaladores](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1).
+## Getting started <a name="primeros"></a>
+### Dependencies <a name="dependencias"></a>
+To execute **EMC** is necessary to have an older version than JAVA 11.
+If you want to download the code and compile it, you will need the last version of [JavaFX](https://gluonhq.com/products/javafx/)
 
 
-## Manual de uso <a name="manual"></a>
-### Interfaz <a name="interfaz"></a>
+### Installation <a name="install"></a>
+
+Download the **EMC** installer for your operating system in: [Downloads](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1).
+
+
+## Use <a name="manual"></a>
+### Interface <a name="interfaz"></a>
 <p align="center">
   <img src="readme/interfaz.png" alt="EMC">
 </p>
 
- 1. Introducir nuevo modelo
- 2. Recargar modelo
- 3. Ayuda
- 4. Campo de texto donde introducir la fórmula
- 5. Ejecutar el verificador
- 6. Limpiar interfaz
- 7. Área de texto donde se muestra el resultado
- 8. Área gráfica donde se muestra el grafo del modelo
+ 1. Introduce a new model
+ 2. Reload the model
+ 3. Help
+ 4. Formula field text
+ 5. Run the checker
+ 6. Clean the interface
+ 7. Return area
+ 8. Graph area 
 
-### Introducción de modelos <a name="modelo"></a>
-La introducción del modelo consiste en la creación de un archivo de texto (txt) en donde se escribe el modelo siguiendo la notación matemática. Aportamos ahora un ejemplo, así como algunas consideraciones a tener en cuenta. 
+### Model input <a name="modelo"></a>
+To introduce the model you need to create a text file (txt) where the model is written following the mathematical notation. An example and some considerations to be taken into account are provided.
 ```
 W={w0,w1,w2}
 Ra={<w0,w1>,<w2,w2>}
@@ -61,35 +58,36 @@ V(p)={w0,w1,w2}
 V(q)={w2,w1}
 V(r)={w0}
 ```
-* Se pueden crear hasta un máximo de 10 mundos, empezando siempre por w0.
-* El número de agentes está restringido a 4; a, b, c y d.
-* El dominio de los átomos interpretables por **EMC** es: {p,q,r,s,t,u,v,w,x,y,z}
-* Se pueden descargar ejemplos en el siguiente enlace: [ejemplo de modelos](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1) 
+* **You can not** create more than 10 worlds: {w0,w1,w2,w3,w4,w5,w6,w7,w8,w9}, begining always with w0.
+* **You can not** create more than 4 agents: a, b, c and d.
+* The **domain** of the atom set is: {p,q,r,s,t,u,v,w,x,y,z}
+* Some model **example** are available here: [ejemplo de modelos](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1) 
 
-### Introducción de fórmulas <a name="formula"></a>
-La sintaxis para la introducción de fórmulas es la siguiente. 
+### Formula input <a name="formula"></a>
+Check the syntaxis of the formula in this table.
 
-| Operador     | Ejemplo notación  clásica  | Ejemplo notación EMC 
+| Operator | Classic notation  | EMC notation
  ------------- |:-------------:| :-------------:|
- |Negación* | ¬p | \lnot( p )    
-| Conjunción   |  p ∧ q | p \land q |
-| Disyunción     | p v q       |   p \lor q |
-| Implicación | p → q     |  p \to q |
-| Equivalencia | p ↔ q | p \eq q |
-| Conocimiento* | K<sub>a</sub>p | Ka( p )|
-| Dual del conocimeinto*|  M<sub>a</sub>p | Ma( p ) |
+| Negation* | ¬p | \lnot( p )    
+| Conjunction |  p ∧ q | p \land q |
+| Disjunction | p v q       |   p \lor q |
+| Implication | p → q     |  p \to q |
+| Biconditional | p ↔ q | p \eq q |
+| Knowledge* | K<sub>a</sub>p | Ka( p )|
+| Dual of knowledge*|  M<sub>a</sub>p | Ma( p ) |
 
-*Es importante recalcar que los operadores monádicos deben escribirse siempre manteniendo los paréntesis que delimiten la fórmula a la que afectan
+* **Always** use parenthesis to write the monadic operator.
 
-#### Ejemplo de uso
+#### Usage example <a name="ejemplo"></a>
 <p align="center">
   <img src="readme/corte.gif" alt="EMC">
 </p>
 
-## Desarrolladores <a name="community"></a>
-El proyecto ha sido desarrollado por 
-* Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)<a name="mail"></a>
+## Developers <a name="community"></a>
+The project has been developed for a final degree work (TFG) in the philosophy department of the University of Málaga by:
+* Carlos Aguilera Ventura: carlos.aguilera13416@gmail.com<a name="mail"></a>
+Supervised by:
 * Alfredo Burrieza Muñiz
 * Antonio Yuste Ginel
 ## Licencia <a name="licence"></a>
-EMC está licenciado bajo GNUv3, véase: [LICENCE](https://github.com/CaAgVe/EpistemicModelChecker/blob/Release_1.01/licence) 
+EMC is licensed by GNUv3 : [LICENCE](https://github.com/CaAgVe/EpistemicModelChecker/blob/Release_1.01/licence) 
