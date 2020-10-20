@@ -92,6 +92,14 @@
                     <compress>2</compress>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId> <!-- Plugin para poder ejecutar java -->
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>org.epistemic.Main</mainClass>
+                </configuration>
+            </plugin>
 	    <!-- Plugin para crear paquete deb 
             <plugin>
                 <groupId>io.solit.maven</groupId>

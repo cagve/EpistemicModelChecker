@@ -23,10 +23,10 @@ public class Traductor {
      */
     public String convertMono(String cad) {
         String formulaTraducida = cad;
-        formulaTraducida = formulaTraducida.replace("\\ka","*");
-        formulaTraducida = formulaTraducida.replace("\\kb","@");
-        formulaTraducida = formulaTraducida.replace("\\kc","·");
-        formulaTraducida = formulaTraducida.replace("\\kd","$");
+        formulaTraducida = formulaTraducida.replace("\\ma","*");
+        formulaTraducida = formulaTraducida.replace("\\mb","@");
+        formulaTraducida = formulaTraducida.replace("\\mc","·");
+        formulaTraducida = formulaTraducida.replace("\\md","$");
         //formulaTraducida = formulaTraducida.replace("\\lnot","!");
         return formulaTraducida;
     }

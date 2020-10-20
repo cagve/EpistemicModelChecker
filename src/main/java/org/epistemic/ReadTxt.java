@@ -34,13 +34,20 @@ public class ReadTxt {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
-    public void muestraContenido() throws FileNotFoundException, IOException {
+    public boolean parseFile() throws FileNotFoundException, IOException {
         FileReader f = new FileReader(archivo);
         BufferedReader b = new BufferedReader(f);  
-        while((cad = b.readLine())!=null) {
-            System.out.println(cad);
+        ParserManager parser = new ParserManager();
+        boolean flag=true;
+        while((cad = b.readLine())!=null && flag==true) {
+            if(cad.isBlank()){ //Ignorar lineas en blanco
+                continue;
+            }
+            cad=cad.replaceAll("\\s",""); //Elimina espacios en blanco
+            flag = parser.isValid(cad);
         }
         b.close();
+        return flag;
     }
 
 	/**
