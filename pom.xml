@@ -88,8 +88,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-                    <mainClass>org.interfazfx.App</mainClass>
-                    <compress>2</compress>
+                    <mainClass>org.interfazfx.Launcher</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -99,6 +98,18 @@
                 <configuration>
                     <mainClass>org.epistemic.Main</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId> <!-- Plugin para generar javadoc --> 
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 	    <!-- Plugin para crear paquete deb 
             <plugin>

@@ -10,7 +10,6 @@ import java.util.ArrayList;
  *  Clase encargada de controlar todo lo relativo a la fórmula
  * @version 3.01
  * @author Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
- * @date 14/07/2020
  */
 public class FormulaManager {
     /**
@@ -35,7 +34,7 @@ public class FormulaManager {
     /**
      * Elimina los elementos duplicados de una lista
      * @param list lista donde eliminar los elementos duplicados
-     * @param <T>
+     * @param <T> Timpo de la lista
      * @return newList lista con los elementos duplicados eliminados
      */
     public static <T> ArrayList<T> removeDuplicates(ArrayList<T> list){
@@ -95,7 +94,7 @@ public class FormulaManager {
     }
 
     /**
-     *  Devuelve la longitud de una fórmula dada
+     * Devuelve la longitud de una fórmula dada
      * @param formula formula a analizar
      * @return lg. Longitud de la fórmula
      */
@@ -157,7 +156,7 @@ public class FormulaManager {
     }
 
     /**
-     *  Obtiene la longitud máxima de un conjunto de fórmulas
+     * Obtiene la longitud máxima de un conjunto de fórmulas
      * @param list lista a analizar
      * @return max. Número máximo
      */
@@ -171,37 +170,4 @@ public class FormulaManager {
         }
         return max;
     }
-
-   // public static void main(String[]args) throws ParserException, IOException {
-   //     FormulaManager sub = new FormulaManager();
-   //     EpistemicParser epistemicParser= new EpistemicParser();
-   //     ArrayList<RelationalFormula> list = new ArrayList<RelationalFormula>();
-
-   //     //INTRODUCIR ALFABETO EN XML
-   //     FolSignature sig = new FolSignature();
-   //     sig.add(new Predicate("p",0));
-   //     sig.add(new Predicate("q",0));
-   //     sig.add(new Predicate("r",0));
-   //     sig.add(new Predicate("s",0));
-   //     sig.add(new Predicate("t",0));
-   //     sig.add(new Predicate("u",0));
-   //     sig.add(new Predicate("v",0));
-   //     sig.add(new Predicate("w",0));
-   //     sig.add(new Predicate("x",0));
-   //     sig.add(new Predicate("y",0));
-   //     sig.add(new Predicate("z",0));
-
-
-   //     epistemicParser.setSignature(sig);
-   //     RelationalFormula formulaFinal = epistemicParser.parseFormula("p => q");
-
-   //     Negation neg = new Negation(formulaFinal);
-   //     list=sub.getSubFormula(neg);
-
-   //     list=FormulaManager.removeDuplicates(list);
-   //     System.out.println(list);
-
-   //     System.out.println(sub.getLg(formulaFinal));
-   // }
-
 }

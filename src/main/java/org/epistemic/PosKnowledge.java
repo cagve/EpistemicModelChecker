@@ -10,7 +10,6 @@ import net.sf.tweety.logics.ml.syntax.MlFormula;
  * @see "https://tweetyproject.org/api/1.16/net/sf/tweety/logics/ml/syntax/MlFormula.html"
  * @version 3.01
  * @author Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
- * @date 14/07/2020
  */
 public class PosKnowledge extends MlFormula{
     MlFormula formula;
@@ -18,7 +17,7 @@ public class PosKnowledge extends MlFormula{
 
     /**
      *  Constructor
-     * @param formula
+     * @param formula Formula
      * @param c agente
      */
     public PosKnowledge(RelationalFormula formula, char c) {

@@ -14,8 +14,8 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Tooltip?> 
 
-<?import javafx.scene.control.Tooltip?>
 <BorderPane fx:id="root" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@style.css" fx:controller="org.interfazfx.Controller">
    <top>
       <HBox prefHeight="100.0" prefWidth="1000.0" styleClass="top" BorderPane.alignment="CENTER">
@@ -25,7 +25,7 @@
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
                <image>
-                  <Image url="@/org/interfazfx/img/logo.png" />
+                  <Image url="@img/logo.png" />
                </image>
             </ImageView>
            <!-- <Text fill="#eceff1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTop" text="Epistemic Model Checker">
@@ -44,7 +44,7 @@
                <graphic>
                   <ImageView fx:id="file" fitHeight="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/org/interfazfx/img/mas.png" />
+                        <Image url="@img/mas.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -60,7 +60,7 @@
                <graphic>
                   <ImageView fx:id="reload" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/org/interfazfx/img/reload.png" />
+                        <Image url="@img/reload.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -76,7 +76,7 @@
                <graphic>
                   <ImageView fx:id="info" fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/org/interfazfx/img/help.png" />
+                        <Image url="@img/help.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -113,7 +113,7 @@
                            <graphic>
                               <ImageView fx:id="run" disable="true" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@/org/interfazfx/img/triangulo.png" />
+                                    <Image url="@img/triangulo.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -124,11 +124,11 @@
                               <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                            </padding>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#clean">
+                        <Button mnemonicParsing="false" onAction="#clear">
                            <graphic>
                               <ImageView fx:id="clear" fitHeight="150.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="button" translateY="-2.0">
                                  <image>
-                                    <Image url="@/org/interfazfx/img/basura.png" />
+                                    <Image url="@img/basura.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -174,7 +174,7 @@
                <graphic>
                   <ImageView fx:id="adImg" fitHeight="150.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/org/interfazfx/img/ad.png" />
+                        <Image url="@img/ad.png" />
                      </image>
                   </ImageView>
                </graphic>

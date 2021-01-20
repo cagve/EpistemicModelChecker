@@ -25,7 +25,7 @@
                   <Insets left="20.0" top="25.0" />
                </HBox.margin>
                <image>
-                  <Image url="@/org/interfazfx/img/logo.png" />
+                   <!-- <Image url="../resources/img/logo.png" /> -->
                </image>
             </ImageView>
            <!-- <Text fill="#eceff1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTop" text="Epistemic Model Checker">

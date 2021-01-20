@@ -1,38 +1,30 @@
 package org.epistemic;
+import java.util.HashSet;
 
-import java.util.ArrayList;
+public class RelationSet extends HashSet<Relation>{
+    private String name;
 
-public class RelationSet {
-    private final ArrayList<Relation> relationSet;
-
-    /**
-     * Constructor
-     * @param relationSet
-     */
-    public RelationSet (ArrayList<Relation> relationSet){
-        this.relationSet=relationSet;
+	public RelationSet(){
     }
 
-    /**
-     * Devuelve el conjunto de relaciones
-     * @return
-     */
-    public ArrayList<Relation> getRelationSet() {
-        return relationSet;
+	public RelationSet(String name){
+        this.name=name;
+    }
+   
+    public String getName(){
+        return name;
+    }
+    
+    public Relation get(int index){
+        Relation[] array = this.toArray( new Relation[this.size()] );
+        return array[index];
     }
 
-    /**
-     * Devuelve las relaciones de un agente en concreto
-     * @param agent
-     * @return
-     */
-    public ArrayList<Relation> getRelationSetOfAgent(char agent){
-        ArrayList<Relation> relationAgentSet=new ArrayList<>();
-        for(int i=0;i<relationSet.size();i++){
-            if(relationSet.get(i).getAgent()==agent){
-                relationAgentSet.add(relationSet.get(i));
-            }
+    public Relation getRel(Relation relation){
+        Relation finalRel = relation;
+        if(!this.contains(relation)){
+            finalRel=null;
         }
-        return relationAgentSet;
+        return finalRel;
     }
 }

@@ -19,22 +19,21 @@ import java.io.IOException;
  * @author Carlos Aguilera
  */
 public class App extends Application {
-    //SampleController.java controller = new SampleController.java();
 /**
 *@param primaryStage  Recibe un marco vacío
 *@return  Stage Devuelve la escena correspondiente a la interfaz
  */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("org/interfazfx/top.fxml"));
+        // Parent root = FXMLLoader.load(getClass().getResource("/fxmlresources/borrar.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlresources/top.fxml"));
         Scene scene = new Scene(root,1000,700);
-        primaryStage.setTitle("EMC " );
+        primaryStage.setTitle("EMC");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        BufferedImage masB = ImageIO.read(ClassLoader.getSystemResource( "org/interfazfx/img/48.png" ) );
-        Image masImg = SwingFXUtils.toFXImage(masB, null);
-        primaryStage.getIcons().add(masImg);
+        // BufferedImage masB = ImageIO.read(ClassLoader.getSystemResource( "org/interfazfx/img/48.png" ) );
+        // Image masImg = SwingFXUtils.toFXImage(masB, null);
+        // primaryStage.getIcons().add(masImg);
     }
 
   /**

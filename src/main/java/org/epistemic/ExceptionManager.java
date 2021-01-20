@@ -1,18 +1,12 @@
 package org.epistemic;
 
 public class ExceptionManager extends Exception{
-    private String codigoError;
-    private String mensajeError;
+    /**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 
-    public ExceptionManager(String codigoError){
-        super();
-        this.codigoError=codigoError;
+	public ExceptionManager(String mensajeError){
+        super(mensajeError);
     }
-    
-    public void showError(){
-        System.out.println(codigoError);
-    }
-
-
-
 }

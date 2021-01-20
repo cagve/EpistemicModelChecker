@@ -50,7 +50,6 @@ import java.util.*;
  * @see "https://tweetyproject.org/api/1.16/net/sf/tweety/logics/ml/parser/MlParser.html"
  * @version 3.01
  * @author Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
- * @date 14/07/2020
  */
 public class EpistemicParser extends Parser<MlBeliefSet,RelationalFormula> {
 

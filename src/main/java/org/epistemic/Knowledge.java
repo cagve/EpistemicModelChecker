@@ -10,7 +10,6 @@ import net.sf.tweety.logics.ml.syntax.MlFormula;
  * @see "https://tweetyproject.org/api/1.16/net/sf/tweety/logics/ml/syntax/MlFormula.html"
  * @version 3.01
  * @author Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
- * @date 14/07/2020
  */
 public class Knowledge extends MlFormula {
     MlFormula formula;

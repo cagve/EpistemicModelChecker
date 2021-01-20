@@ -6,7 +6,6 @@ import java.util.Stack;
  * Se encarga de traducir las fórmulas una vez introducidas por el usuario. Permite que la entrada sea tanto en formato informático como en formáto latex.
  * @version 3.01
  * @author Carlos Aguilera Ventura (carlos.aguilera13416@gmail.com)
- * @date 14/07/2020
  */
 public class Traductor {
 
@@ -68,9 +67,9 @@ public class Traductor {
     }
 
     /**
-     * Introduce los parénteisis en aquellas ocasiones en las que es necesario
-     * @param pila
-     * @return
+     * Vaciar pilas
+     * @param pila Pila a vaciar
+     * @return Devuelve la fórmula con los paréntesis introducidos
      * @deprecated
      */
     public String emptyStack(Stack<String> pila){
