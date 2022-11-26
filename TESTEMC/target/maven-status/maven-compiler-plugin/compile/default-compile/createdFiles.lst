@@ -1,0 +1,13 @@
+org/epistemic/RelationSet.class
+org/epistemic/PosKnowledge.class
+org/epistemic/World.class
+org/epistemic/Reasoner.class
+org/epistemic/ReadTxt.class
+org/epistemic/Traductor.class
+org/epistemic/Relation.class
+org/epistemic/Knowledge.class
+org/epistemic/FormulaManager.class
+org/epistemic/EpistemicParser.class
+org/epistemic/WorldSet.class
+org/epistemic/EpistemicModel.class
+org/epistemic/Main.class

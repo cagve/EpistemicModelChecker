@@ -38,18 +38,18 @@
             <version>13</version>
         </dependency>
         <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>gui</artifactId>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-ui</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>core</artifactId>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-core</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>graphstream</groupId>
-            <artifactId>algo</artifactId>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-algo</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
@@ -88,7 +88,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-                    <mainClass>org.interfazfx.App</mainClass>
+                    <mainClass>org.epistemic.Main</mainClass>
                     <compress>2</compress>
                 </configuration>
             </plugin>
