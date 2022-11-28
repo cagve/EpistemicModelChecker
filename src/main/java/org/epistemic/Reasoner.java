@@ -92,7 +92,7 @@ public class Reasoner {
                 bol = true;
             } else {
                 while (j < length) {
-                    bol = WorldReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(0));
+                    bol = WorldReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
                     if (bol == false) {
                         break;
                     } else {

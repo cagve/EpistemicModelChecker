@@ -9,6 +9,9 @@ import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.implementations.MultiGraph;
 import org.graphstream.ui.swingViewer.ViewPanel;
+import org.graphstream.ui.view.View;
+// import org.graphstream.ui.swingViewer.ViewPanel;
+// import org.graphstream.ui.view.Viewer;
 import org.graphstream.ui.view.Viewer;
 
 import javax.swing.*;
@@ -24,10 +27,10 @@ public class CreateGraph {
 		boolean bool=false;
 		Collection<Edge> list = graph.getEdgeSet();
 		ArrayList<Edge> newList=new ArrayList<Edge>(list);
+        // System.out.println(newList);
 		int j=0;
 		while(bool==false&&j<newList.size()) {
 			String compare=newList.get(j).toString();
-			System.out.println("CHECK: "+compare);
 			bool=compare.equals(cad);
 			j++;
 		}
@@ -51,7 +54,6 @@ public class CreateGraph {
 
 		Graph graph = new MultiGraph("KripkeModel");
 		GraphVisualitation visu = new GraphVisualitation(graph);
-	    CreateGraph create = new CreateGraph();
 
 		/*Crear los mundos*/
 		for(int i= 0;i<worldSet.getWorldSet().size();i++) {
@@ -70,8 +72,9 @@ public class CreateGraph {
 			first=currentRel.getFirst().getName();
 			second=currentRel.getSecond().getName();
 			name=first+second;
-			String compare=name+"["+first+"->"+second+"]";
-			if(create.checkEdgeExist(compare, graph)) {
+            // String compare="[edge "+name+" ("+first+" -> "+second+")]"; VERSION 1
+            String compare=name+"["+first+"->"+second+"]"; // VERSION 1.3
+			if(this.checkEdgeExist(compare, graph)) {
 				visu.setAgent(name, currentAgent);
 			}else {
 				graph.addEdge(name,first,second,true);
@@ -80,9 +83,14 @@ public class CreateGraph {
 		
 		}
 		
-		graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
+		// graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
+		graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
-      
+
+        //OLD
+        // Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
+        // ViewPanel viewPanel = viewer.addDefaultView(false);   // false indicates "no JFrame".
+        //NEW 
         Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
         ViewPanel viewPanel = viewer.addDefaultView(false);   // false indicates "no JFrame".
         viewer.enableAutoLayout();
@@ -106,7 +114,6 @@ public class CreateGraph {
 
 		Graph graph = new MultiGraph("KripkeModel");
 		GraphVisualitation visu = new GraphVisualitation(graph);
-		CreateGraph create = new CreateGraph();
 
 		for(int i= 0;i<worldSet.getWorldSet().size();i++) {
 			cad="w"+ String.valueOf(i); //Cadena que recoje el nombre del nodo
@@ -119,8 +126,9 @@ public class CreateGraph {
 			first=currentRel.getFirst().getName();
 			second=currentRel.getSecond().getName();
 			name=first+second;
-			String compare=name+"["+first+"->"+second+"]";
-			if(create.checkEdgeExist(compare, graph)) {
+            // String compare="[edge "+name+" ("+first+" -> "+second+")]"; VERSION 1
+            String compare=name+"["+first+"->"+second+"]"; // VERSION 1.3
+			if(this.checkEdgeExist(compare, graph)) {
 				visu.setAgent(name, currentAgent);
 			}else {
 				graph.addEdge(name,first,second,true);
@@ -135,18 +143,23 @@ public class CreateGraph {
 		while(i<worldSet.getWorldSet().size()) {
 			currentWorld="w"+String.valueOf(i);
 			for(int j=0;j<list.size();j++) {
-				if(reasoner.WorldReasoner(list.get(j),model, worldSet.getWorldSet().get(i))){
+				if(reasoner.WorldReasoner(list.get(j), model, worldSet.getWorldSet().get(i))){
 					visu.setAtoms(currentWorld, t.convertNormal(list.get(j).toString()));
 				}
 			}visu.setSimpleName(currentWorld, currentWorld);
 		i++;
 		}
-		graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		// graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
 
         //COMPLETAR CON BOTONES
+        //OLD
         Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
-        ViewPanel viewPanel = viewer.addDefaultView(false);   // false indicates "no JFrame".
+        ViewPanel viewPanel = (ViewPanel) viewer.addDefaultView(false);   // false indicates "no JFrame".
+        // NEW
+        // Viewer viewer = new Viewer(graph, Viewer.ThreadingModel.GRAPH_IN_ANOTHER_THREAD);
+        // View viewPanel = viewer.addDefaultView(false);   // false indicates "no JFrame".
         viewer.enableAutoLayout();
         return viewPanel;
 

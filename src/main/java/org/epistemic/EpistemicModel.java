@@ -28,7 +28,9 @@ public class EpistemicModel {
     public RelationSet getRelationOf(World world, char agent) {
         ArrayList<Relation> relationArraySet= new ArrayList<Relation>();
         for (int i = 0; i < relationSet.getRelationSet().size(); i++) {
-            if (relationSet.getRelationSet().get(i).getFirst() == world && relationSet.getRelationSet().get(i).getAgent() == agent) {
+            String currentWorldName = relationSet.getRelationSet().get(i).getFirst().getName();
+            String worldName = world.getName();
+            if (currentWorldName.equals(worldName) && relationSet.getRelationSet().get(i).getAgent() == agent) {
                 relationArraySet.add(relationSet.getRelationSet().get(i));
             }
         }
@@ -67,6 +69,17 @@ public class EpistemicModel {
      */
     public WorldSet getWorldSet(){
         return worldSet;
+    }
+
+    public World getWorldByName(String name){
+        World not = new World("No existe");
+        for(int j=0;j<worldSet.getWorldSet().size();j++){
+            World world = worldSet.getWorldSet().get(j);
+            if (world.getName() == name){
+                return world;
+            }
+        }
+        return not;
     }
 
     /**

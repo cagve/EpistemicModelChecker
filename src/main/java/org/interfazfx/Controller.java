@@ -168,6 +168,7 @@ public class Controller {
         tab.setContent(swingNode);
         tab.setText("Model");
         tabPane.getTabs().add(tab);
+        this.reload(); // FIX ERROR 1
         this.loadMsg("Model loaded");
     }
 

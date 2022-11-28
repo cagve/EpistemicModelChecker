@@ -50,10 +50,16 @@ public class GraphVisualitation {
      * @param name nombre del mundo
      */
     public void setSimpleName(String node, String name) {
+        // System.out.println("Set simple name "+node+" "+name);
         SpriteManager sman = new SpriteManager(graph);
         Sprite a = sman.addSprite(node);
-        a.addAttribute("ui.class", "world");
-        a.addAttribute("ui.label", name);
+        
+        // FIX ERROR 2
+        // a.addAttribute("ui.class", "world");
+        // a.addAttribute("ui.label", name);
+        a.setAttribute("ui.class", "world");
+        a.setAttribute("ui.style", "text-background-mode: rounded-box; text-padding:5px,2.5px; text-alignment:under; text-background-color: #8facb480; fill-mode:none; text-size:11;");
+        a.setAttribute("ui.label", name);
         a.attachToNode(node);
         a.setPosition(Units.PX, -20, 180, 90);
     }

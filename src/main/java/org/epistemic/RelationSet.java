@@ -35,4 +35,10 @@ public class RelationSet {
         }
         return relationAgentSet;
     }
+
+    public void DebugRelation(){
+        for (int j = 0; j<this.relationSet.size(); j++){
+            System.out.println(relationSet.get(j).getName());
+        }
+    }
 }
