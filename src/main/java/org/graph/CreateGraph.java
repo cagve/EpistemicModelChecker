@@ -84,7 +84,8 @@ public class CreateGraph {
 		}
 		
 		// graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //src/main/java/resources/style.css El directorio para .jar
-		graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		// graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		graph.addAttribute("ui.stylesheet", "url('file:graphstyle.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
 
         //OLD
@@ -141,16 +142,25 @@ public class CreateGraph {
 		Reasoner reasoner = new Reasoner();
 		int i=0;
 		while(i<worldSet.getWorldSet().size()) {
+            String formulasToAdd = "";
 			currentWorld="w"+String.valueOf(i);
 			for(int j=0;j<list.size();j++) {
 				if(reasoner.WorldReasoner(list.get(j), model, worldSet.getWorldSet().get(i))){
-					visu.setAtoms(currentWorld, t.convertNormal(list.get(j).toString()));
+					// visu.setAtoms(currentWorld, t.convertNormal(list.get(j).toString()));
+                    if (formulasToAdd.equals("")){
+                        formulasToAdd = t.convertNormal(list.get(j).toString());
+                    }else{
+                        formulasToAdd = formulasToAdd + ", "+t.convertNormal(list.get(j).toString());
+                    }
 				}
-			}visu.setSimpleName(currentWorld, currentWorld);
-		i++;
+			}
+            visu.setSimpleName(currentWorld, currentWorld);
+            visu.setAtoms(currentWorld,formulasToAdd);
+            i++;
 		}
 		// graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //.res/style.css Para compilar .jar
-		graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		// graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
+		graph.addAttribute("ui.stylesheet", "url('file:graphstyle.css')"); //.res/style.css Para compilar .jar
         graph.addAttribute("ui.antialias");
 
         //COMPLETAR CON BOTONES

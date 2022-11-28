@@ -58,7 +58,6 @@ public class GraphVisualitation {
         // a.addAttribute("ui.class", "world");
         // a.addAttribute("ui.label", name);
         a.setAttribute("ui.class", "world");
-        a.setAttribute("ui.style", "text-background-mode: rounded-box; text-padding:5px,2.5px; text-alignment:under; text-background-color: #8facb480; fill-mode:none; text-size:11;");
         a.setAttribute("ui.label", name);
         a.attachToNode(node);
         a.setPosition(Units.PX, -20, 180, 90);
