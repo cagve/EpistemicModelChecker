@@ -10,7 +10,7 @@ import net.sf.tweety.logics.fol.syntax.FolSignature;
 
 class Main {
     public static void main(String[] args) throws IOException {
-        String modelPath = "/home/karu/Downloads/example4.txt";
+        String modelPath = "/home/caguiler/Downloads/modelosimple.txt";
         ReadTxt txt = new ReadTxt(modelPath);
         WorldSet worldSet = txt.buildWorldSet();
         RelationSet relationSet = txt.buildRelationSet(worldSet);
@@ -34,7 +34,8 @@ class Main {
         epistemicParser.setSignature(sig);
 
 
-        String formula = "Ka(p)";
+        String formula = "Kc(Ka(p))";
+        // String formula = "Ka(p)";
         Traductor t = new Traductor();
         formula = t.convertEMC(formula);
         RelationalFormula formulaFinal = epistemicParser.parseFormula(formula);
@@ -56,8 +57,9 @@ class Main {
         // REASONER DEBUG
         System.out.println("===========================REASONER DEBUG==============================");
         for (int y = 0; y < worldSet.getWorldSet().size(); y++) {
-            System.out.println("The formula " + t.convertNormal(formula) + " is "
-                    + reasoner.WorldReasoner(formulaFinal, model, worldSet.getWorldSet().get(y)) + " in w" + y + "\n");
+            System.out.println("CHECKING WORLD "+worldSet.getWorldSet().get(y).getName());
+            System.out.println("END: The formula " + t.convertNormal(formula) + " is "
+                    + reasoner.RecursiveReasoner(formulaFinal, model, worldSet.getWorldSet().get(y)) + " in w" + y + "\n");
         }
     }
 }
