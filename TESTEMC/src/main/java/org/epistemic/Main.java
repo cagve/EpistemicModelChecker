@@ -59,7 +59,7 @@ class Main {
         for (int y = 0; y < worldSet.getWorldSet().size(); y++) {
             System.out.println("CHECKING WORLD "+worldSet.getWorldSet().get(y).getName());
             System.out.println("END: The formula " + t.convertNormal(formula) + " is "
-                    + reasoner.RecursiveReasoner(formulaFinal, model, worldSet.getWorldSet().get(y)) + " in w" + y + "\n");
+                    + reasoner.Recursive(formulaFinal, model, worldSet.getWorldSet().get(y)) + " in w" + y + "\n");
         }
     }
 }

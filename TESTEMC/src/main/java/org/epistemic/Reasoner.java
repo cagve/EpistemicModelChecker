@@ -138,30 +138,38 @@ public class Reasoner {
         char agent = know.getAgent();
         WorldSet accessWorldSet = model.getAccWorld(world, agent);
         System.out.println("===========KNOW FORMULA  "+know+" in "+world.getName());
-        int j = 0;
         int length = accessWorldSet.getWorldSet().size();
         bol = true;
         if (accessWorldSet.getWorldSet().isEmpty()) {// Si no tiene relaciones
             System.out.println("MUNDO FINAL");
             return true;
         } else {
-            while (j < length && bol == true) {
+            for (int j = 0;j < length; j++) {
                 World currentWorldAcc =  accessWorldSet.getWorldSet().get(j);
                 System.out.println(j+":"+ know+" => Analizando "+know.getFormula()+" en "+world.getName()+"-"+currentWorldAcc.getName()+":");
-                // bol = RecursiveReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
-                if (formula.getClass() == know.getClass()){
-                    KnowReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
-                }
-                else{
-
+                // // bol = RecursiveReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
+                if (know.getFormula().getClass() == know.getClass()){
+                    System.out.println("Hay que iterar+por eso nos salimos");
+                    System.out.println("SUBFORMULA = "+know.getFormula());
+                    // return KnowReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
+                    // bol = KnowReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
+                } else{
                     bol = RecursiveReasoner(know.getFormula(), model, accessWorldSet.getWorldSet().get(j));
+                    System.out.println(bol);
+                    if (bol == false){
+                        break;
+                    }
                 }
-                // System.out.println(j+":"+ know+" => Analizando "+know.getFormula()+" en "+world.getName()+"-"+currentWorldAcc.getName()+":"+bol);
-                j++;
             }
-            System.out.println("Fin: "+ know +" es "+bol+ "in "+world.getName());
+            System.out.println("PRINT "+bol);
             return bol;
         }
+    }
+
+    public ArrayList<RelationalFormula> Recusive(RelationalFormula formula, EpistemicModel model, World world) {
+        ArrayList<RelationalFormula> subformula =  formula.getSubFormula();
+        System.out.println(subformula.size());
+
     }
 
     public boolean RecursiveReasoner(RelationalFormula formula, EpistemicModel model, World world) {
