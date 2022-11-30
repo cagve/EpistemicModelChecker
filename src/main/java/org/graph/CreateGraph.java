@@ -104,6 +104,7 @@ public class CreateGraph {
 		System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
 		Traductor t = new Traductor();
 		WorldSet worldSet = model.getWorldSet();
+        Reasoner reasoner = new Reasoner();
 		RelationSet relationSet = model.getRelationSet();
 		ArrayList<Character> agentSet = model.getAgentList();
 		Relation currentRel;
@@ -112,6 +113,7 @@ public class CreateGraph {
 		String first;
 		String second;
 		String name;
+
 
 		Graph graph = new MultiGraph("KripkeModel");
 		GraphVisualitation visu = new GraphVisualitation(graph);
@@ -139,14 +141,13 @@ public class CreateGraph {
 		}
 
 		String currentWorld;
-		Reasoner reasoner = new Reasoner();
 		int i=0;
 		while(i<worldSet.getWorldSet().size()) {
             String formulasToAdd = "";
 			currentWorld="w"+String.valueOf(i);
 			for(int j=0;j<list.size();j++) {
-				if(reasoner.WorldReasoner(list.get(j), model, worldSet.getWorldSet().get(i))){
-					// visu.setAtoms(currentWorld, t.convertNormal(list.get(j).toString()));
+                reasoner.WorldReasoner( list.get(j),model,model.getWorldSet().getWorldSet().get(i));
+                if (worldSet.getWorldSet().get(i).containsTrueFormula(list.get(j))){
                     if (formulasToAdd.equals("")){
                         formulasToAdd = t.convertNormal(list.get(j).toString());
                     }else{
