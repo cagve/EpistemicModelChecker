@@ -1,9 +1,11 @@
 package org.epistemic;
 
+import net.sf.tweety.commons.ParserException;
 import net.sf.tweety.logics.commons.syntax.Predicate;
 import net.sf.tweety.logics.commons.syntax.RelationalFormula;
 import net.sf.tweety.logics.fol.syntax.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -48,6 +50,29 @@ public class FormulaManager {
         return newList;
     }
 
+    public RelationalFormula createFormulaFromString(String Formula) throws ParserException, IOException{
+        FolSignature sig = new FolSignature();
+        EpistemicParser epistemicParser = new EpistemicParser();
+        sig.add(new Predicate("p", 0));
+        sig.add(new Predicate("q", 0));
+        sig.add(new Predicate("r", 0));
+        sig.add(new Predicate("s", 0));
+        sig.add(new Predicate("t", 0));
+        sig.add(new Predicate("u", 0));
+        sig.add(new Predicate("v", 0));
+        sig.add(new Predicate("w", 0));
+        sig.add(new Predicate("x", 0));
+        sig.add(new Predicate("y", 0));
+        sig.add(new Predicate("z", 0));
+        epistemicParser.setSignature(sig);
+
+
+        String formula = "p\\lor q";
+        Traductor t = new Traductor();
+        formula = t.convertEMC(formula);
+        RelationalFormula formulaFinal = epistemicParser.parseFormula(formula);
+        return formulaFinal;
+    }
     /**
      *  Se encarga de obtener las subfórmulas de una fórmula dada
      * @param formula fórmula a partir de la cual extraer las subfórmulas
@@ -152,7 +177,6 @@ public class FormulaManager {
                 newList.add(list.get(i));
             }
         }
-
         return newList;
     }
 

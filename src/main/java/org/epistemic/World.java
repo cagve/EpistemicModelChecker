@@ -2,9 +2,12 @@ package org.epistemic;
 
 import java.util.ArrayList;
 
+import net.sf.tweety.logics.commons.syntax.RelationalFormula;
+
 public class World {
     private  String name;
     private ArrayList<Character> atomList= new ArrayList<>();
+    private ArrayList<RelationalFormula> formulaList= new ArrayList<RelationalFormula>();
 
 
     /**
@@ -39,6 +42,26 @@ public class World {
      */
     public ArrayList<Character> getAtomList(){
         return atomList;
+    }
+
+    public ArrayList<RelationalFormula> getFormulaList(){
+        return this.formulaList;
+    }
+
+    public void addTrueFormula(RelationalFormula formula){
+        if (!this.containsTrueFormula(formula)){
+            this.formulaList.add(formula);
+        }
+    }
+
+    
+    public boolean containsTrueFormula(RelationalFormula formula){
+        ArrayList<String> formulaListString = new ArrayList<>();
+        for (int j=0; j<this.formulaList.size(); j++){
+            formulaListString.add(this.formulaList.get(j).toString());
+             
+        }
+        return formulaListString.contains(formula.toString());
     }
 
     /**
