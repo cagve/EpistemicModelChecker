@@ -252,18 +252,25 @@ public class ReadTxt {
 		ArrayList<String> worldStringList =	this.getWorldList();
 		ArrayList<World> worldArrayList = new ArrayList<>();
 		ArrayList<Character> atomList = new ArrayList<>();
+		ArrayList<RelationalFormula> atomFormulaList = new ArrayList<>();
+		FormulaManager man = new FormulaManager();
 		String name;
 		for (int i=0;i<worldStringList.size();i++){
 		    name = "w"+i;
 		    atomList=this.getWorldAtoms(name);
 		    if(!atomList.isEmpty()) {
-				worldArrayList.add(new World(name, atomList));
+                World world = new World(name, atomList);
+				worldArrayList.add(world);
+                for(int j=0; j<atomList.size(); j++){
+                    RelationalFormula formula = man.createFormulaFromString(atomList.get(j));
+                    world.addTrueFormula(formula);
+                }
 			}else{
 				worldArrayList.add(new World(name));
 			}
 		    }
 	   WorldSet worldSet = new WorldSet(worldArrayList);
-		return worldSet;
+       return worldSet;
    }
 
 	/**

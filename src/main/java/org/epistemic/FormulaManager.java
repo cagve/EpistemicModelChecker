@@ -50,7 +50,7 @@ public class FormulaManager {
         return newList;
     }
 
-    public RelationalFormula createFormulaFromString(String Formula) throws ParserException, IOException{
+    public RelationalFormula createFormulaFromString(String formula) throws ParserException, IOException{
         FolSignature sig = new FolSignature();
         EpistemicParser epistemicParser = new EpistemicParser();
         sig.add(new Predicate("p", 0));
@@ -66,8 +66,6 @@ public class FormulaManager {
         sig.add(new Predicate("z", 0));
         epistemicParser.setSignature(sig);
 
-
-        String formula = "p\\lor q";
         Traductor t = new Traductor();
         formula = t.convertEMC(formula);
         RelationalFormula formulaFinal = epistemicParser.parseFormula(formula);

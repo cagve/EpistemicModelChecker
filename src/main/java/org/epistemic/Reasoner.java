@@ -35,6 +35,16 @@ public class Reasoner {
      * @param world
      * @return
      */
+    public boolean Www(RelationalFormula formula, EpistemicModel model, World world) {
+        world.addTrueFormula(formula);
+        world.addTrueFormula(formula);
+        world.addTrueFormula(formula);
+        world.addTrueFormula(formula);
+        world.addTrueFormula(formula);
+        world.addTrueFormula(formula);
+        return true;
+    }
+
     public boolean WorldReasoner(RelationalFormula formula, EpistemicModel model, World world) {
         FormulaManager man = new FormulaManager();
         ArrayList<RelationalFormula> subformula =  man.getSubFormula(formula);
@@ -42,57 +52,56 @@ public class Reasoner {
         for (int i=0; i<=man.getMaxLg(subformula); i++){
             for (int j=0; j<subformula.size(); j++){
                 RelationalFormula currentFormula = subformula.get(j);
-                if (man.getLg(currentFormula) == i){
-                    if (currentFormula.getClass() == atom.getClass()) {
-                        if (world.contains(currentFormula.toString().charAt(0))) {
-                            world.addTrueFormula(currentFormula);
-                        } 
-                    } else if (currentFormula.getClass() == con.getClass()) {
-                        con = (Conjunction) currentFormula;
-                        if (world.containsTrueFormula(con.get(0)) && world.containsTrueFormula(con.get(1))){
-                            world.addTrueFormula(currentFormula);
-                        };
-                    } else if (currentFormula.getClass() == dis.getClass()) {
-                        dis = (Disjunction) currentFormula;
-                        if (world.containsTrueFormula(dis.get(0)) || world.containsTrueFormula(dis.get(1))){
-                            world.addTrueFormula(currentFormula);
-                        };
-                    } else if (currentFormula.getClass() == imp.getClass()) {
-                        imp = (Implication) currentFormula;
-                        if (!world.containsTrueFormula(imp.getFormulas().getFirst()) || world.containsTrueFormula(imp.getFormulas().getSecond())){
-                            world.addTrueFormula(currentFormula);
-                        };
-                    } else if (currentFormula.getClass() == eq.getClass()) {
-                        eq = (Equivalence) currentFormula;
-                        if (world.containsTrueFormula(eq.getFormulas().getFirst()) == world.containsTrueFormula(eq.getFormulas().getSecond())){
-                            world.addTrueFormula(currentFormula);
-                        };
-                    } else if (formula.getClass() == know.getClass()) {
-                        know = (Knowledge) formula;
-                        char agent = know.getAgent();
-                        if (model.getAccWorld(world, agent).getWorldSet().size()==0){
-                            world.addTrueFormula(currentFormula);
-                        }else{
-                            for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
-                                World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
-                                if (!accWorld.containsTrueFormula(know.getFormula())){
-                                    break;
-                                }
-                                world.addTrueFormula(currentFormula);
+                if (currentFormula.getClass() == atom.getClass()) {
+                    if (world.contains(currentFormula.toString().charAt(0))) {
+                        world.addTrueFormula(currentFormula);
+                    } 
+                } else if (currentFormula.getClass() == con.getClass()) {
+                    con = (Conjunction) currentFormula;
+                    if (world.containsTrueFormula(con.get(0)) && world.containsTrueFormula(con.get(1))){
+                        world.addTrueFormula(currentFormula);
+                    };
+                } else if (currentFormula.getClass() == dis.getClass()) {
+                    dis = (Disjunction) currentFormula;
+                    if (world.containsTrueFormula(dis.get(0)) || world.containsTrueFormula(dis.get(1))){
+                        world.addTrueFormula(currentFormula);
+                    };
+                } else if (currentFormula.getClass() == imp.getClass()) {
+                    imp = (Implication) currentFormula;
+                    if (!world.containsTrueFormula(imp.getFormulas().getFirst()) || world.containsTrueFormula(imp.getFormulas().getSecond())){
+                        world.addTrueFormula(currentFormula);
+                    };
+                } else if (currentFormula.getClass() == eq.getClass()) {
+                    eq = (Equivalence) currentFormula;
+                    if (world.containsTrueFormula(eq.getFormulas().getFirst()) == world.containsTrueFormula(eq.getFormulas().getSecond())){
+                        world.addTrueFormula(currentFormula);
+                    };
+                } else if (formula.getClass() == know.getClass()) {
+                    know = (Knowledge) formula;
+                    char agent = know.getAgent();
+                    if (model.getAccWorld(world, agent).getWorldSet().size()==0){
+                        world.addTrueFormula(currentFormula);
+                    }else{
+                        for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
+                            World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
+                            if (!accWorld.containsTrueFormula(know.getFormula())){
+                                break;
                             }
+                            world.addTrueFormula(currentFormula);
                         }
-                    } else {
-                         posKnow = (PosKnowledge) formula;
-                         char agent = posKnow.getAgent();
-                         for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
-                             World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
-                             if (accWorld.containsTrueFormula(posKnow.getFormula())){
-                                 world.addTrueFormula(currentFormula);
-                                 break;
-                             }
-                         }
+                    }
+                } else {
+                    posKnow = (PosKnowledge) formula;
+                    char agent = posKnow.getAgent();
+                    for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
+                        World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
+                        if (accWorld.containsTrueFormula(posKnow.getFormula())){
+                            world.addTrueFormula(currentFormula);
+                            break;
+                        }
                     }
                 }
+
             }
         }
         return world.containsTrueFormula(formula);
@@ -157,34 +166,40 @@ public class Reasoner {
 
         for (int y = 0; y < worldSet.getWorldSet().size(); y++) {
             World world = worldSet.getWorldSet().get(y);
+            System.out.println("===============================================");
+            System.out.println("Analizando mundo "+world.getName());
+            System.out.println("Lista de formulas "+world.getFormulaList());
             boolean value = this.WorldReasoner(formulaFinal, model, worldSet.getWorldSet().get(y));
             result = result + "The formula " + t.convertNormal(formula) + " is "
                     + value + " in " + world.getName() ;
             // SI ES FALSO Y ADEMAS ES KNOW REQUIERE EXPLICACION
-            if (!value && formulaFinal.getClass() == know.getClass()){
-                know = (Knowledge) formulaFinal;
-                char agent = know.getAgent();
-                for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
-                    World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
-                    if (!accWorld.containsTrueFormula(know.getFormula())){
-                        result = result + " because agent "+agent+" accesses "+accWorld.getName()+" and "+know.getFormula()+" is false in that world\n";
-                        break;
-                    }
-                }
+            // if (!value && formulaFinal.getClass() == know.getClass()){
+            //     know = (Knowledge) formulaFinal;
+            //     char agent = know.getAgent();
+            //     for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
+            //         World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
+            //         if (!accWorld.containsTrueFormula(know.getFormula())){
+            //             result = result + " because agent "+agent+" accesses "+accWorld.getName()+" and "+know.getFormula()+" is false in that world\n";
+            //             break;
+            //         }
+            //     }
                  
-            }else if(value && formulaFinal.getClass() == posKnow.getClass()){
-                posKnow = (PosKnowledge) formulaFinal;
-                char agent = posKnow.getAgent();
-                for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
-                    World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
-                    if (accWorld.containsTrueFormula(posKnow.getFormula())){
-                        result = result + " because agent "+agent+" accesses "+accWorld.getName()+" and "+posKnow.getFormula()+" is true in that world\n";
-                        break;
-                    }
-                }
-            }else{
-                result = result + "\n";
-            }
+            // }else if(value && formulaFinal.getClass() == posKnow.getClass()){
+            //     posKnow = (PosKnowledge) formulaFinal;
+            //     char agent = posKnow.getAgent();
+            //     for (int k=0; k<model.getAccWorld(world, agent).getWorldSet().size();k++){
+            //         World accWorld = model.getAccWorld(world,agent).getWorldSet().get(k);
+            //         if (accWorld.containsTrueFormula(posKnow.getFormula())){
+            //             result = result + " because agent "+agent+" accesses "+accWorld.getName()+" and "+posKnow.getFormula()+" is true in that world\n";
+            //             break;
+            //         }
+            //     }
+            // }else{
+            //     result = result + "\n";
+            // }
+        System.out.println("Finalizando mundo "+world.getName());
+        System.out.println("Lista de formulas "+world.getFormulaList());
+        System.out.println("===============================================");
         }
         result = result + "The formula " + t.convertNormal(formula) + " is " + this.ModelReasoner(formulaFinal, model)
                 + " in the model";
