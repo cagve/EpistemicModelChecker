@@ -35,15 +35,6 @@ public class Reasoner {
      * @param world
      * @return
      */
-    public boolean Www(RelationalFormula formula, EpistemicModel model, World world) {
-        world.addTrueFormula(formula);
-        world.addTrueFormula(formula);
-        world.addTrueFormula(formula);
-        world.addTrueFormula(formula);
-        world.addTrueFormula(formula);
-        world.addTrueFormula(formula);
-        return true;
-    }
 
     public boolean WorldReasoner(RelationalFormula formula, EpistemicModel model, World world) {
         FormulaManager man = new FormulaManager();

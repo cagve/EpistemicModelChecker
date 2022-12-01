@@ -16,6 +16,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import net.sf.tweety.logics.commons.syntax.RelationalFormula;
+
 public class ReadTxt {
 
 	 private  String archivo;
@@ -262,7 +264,7 @@ public class ReadTxt {
                 World world = new World(name, atomList);
 				worldArrayList.add(world);
                 for(int j=0; j<atomList.size(); j++){
-                    RelationalFormula formula = man.createFormulaFromString(atomList.get(j));
+                    RelationalFormula formula = man.createFormulaFromString(atomList.get(j).toString());
                     world.addTrueFormula(formula);
                 }
 			}else{
