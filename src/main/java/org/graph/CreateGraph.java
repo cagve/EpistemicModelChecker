@@ -142,23 +142,26 @@ public class CreateGraph {
 
 		String currentWorld;
 		int i=0;
-		// while(i<worldSet.getWorldSet().size()) {
-            // String formulasToAdd = "";
-		// 	currentWorld="w"+String.valueOf(i);
-		// 	for(int j=0;j<list.size();j++) {
-                // reasoner.WorldReasoner( list.get(j),model,model.getWorldSet().getWorldSet().get(i));
-                // if (worldSet.getWorldSet().get(i).containsTrueFormula(list.get(j))){
-                    // if (formulasToAdd.equals("")){
-                        // formulasToAdd = t.convertNormal(list.get(j).toString());
-                    // }else{
-                        // formulasToAdd = formulasToAdd + ", "+t.convertNormal(list.get(j).toString());
-                    // }
-		// 		}
-		// 	}
-            // visu.setSimpleName(currentWorld, currentWorld);
-            // visu.setAtoms(currentWorld,formulasToAdd);
-            // i++;
-		// }
+		while(i<worldSet.getWorldSet().size()) {
+            String formulasToAdd = "";
+			currentWorld="w"+String.valueOf(i);
+			for(int j=0;j<list.size();j++) {
+                System.out.println("===="+list.get(j));
+                World newWorld = model.getWorldByName(currentWorld);
+                System.out.println(newWorld.getFormulaList());
+                // System.out.println(currentWorld+reasoner.WorldReasoner(list.get(j),model,model.getWorldSet().getWorldSet().get(i)));
+                if (model.getWorldSet().getWorldSet().get(i).containsTrueFormula(list.get(j))){
+                    if (formulasToAdd.equals("")){
+                        formulasToAdd = t.convertNormal(list.get(j).toString());
+                    }else{
+                        formulasToAdd = formulasToAdd + ", "+t.convertNormal(list.get(j).toString());
+                    }
+				}
+			}
+            visu.setSimpleName(currentWorld, currentWorld);
+            visu.setAtoms(currentWorld,formulasToAdd);
+            i++;
+		}
 		// graph.addAttribute("ui.stylesheet", "url('file:resources/graphstyle.css')"); //.res/style.css Para compilar .jar
 		// graph.addAttribute("ui.stylesheet", "url('file:/home/karu/EMC/resources/graphstyle.css')"); //.res/style.css Para compilar .jar
 		graph.addAttribute("ui.stylesheet", "url('file:graphstyle.css')"); //.res/style.css Para compilar .jar

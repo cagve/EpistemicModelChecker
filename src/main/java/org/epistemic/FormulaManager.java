@@ -161,7 +161,7 @@ public class FormulaManager {
     }
 
     /**
-     * Devuelve  una lista de subfórmulas ordenadas de menor a mayor según la longitud de estas.
+     * Devuelve las formulas de longitud i
      * @param lg  Longitud máxima
      * @param list Lista de subfórmulas
      * @return newList. Lista ordenada

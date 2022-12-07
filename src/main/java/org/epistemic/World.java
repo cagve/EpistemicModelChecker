@@ -49,9 +49,9 @@ public class World {
     }
 
     public void addTrueFormula(RelationalFormula formula){
-        // if (!this.containsTrueFormula(formula)){
+        if (!this.containsTrueFormula(formula)){
             this.formulaList.add(formula);
-        // }
+        }
     }
 
     
