@@ -259,6 +259,7 @@ public class Controller {
      * Genera los paneles correspondientes para cada uno de los pasos que ha realizado el verificador epistémico
      */
     public String createMultiGraph() throws IOException {
+        System.out.println("LET CREATE GRAPHS");
 
         String form = formulaField.getText();
         Traductor t = new Traductor();
@@ -282,6 +283,7 @@ public class Controller {
         RelationalFormula formula = epistemicParser.parseFormula(form);
         Negation neg = new Negation(formula);
         String newCad;
+        Reasoner run = new Reasoner();
 
         FormulaManager sub=new FormulaManager();
         ArrayList<RelationalFormula> list = sub.getSubFormula(formula);
@@ -304,8 +306,8 @@ public class Controller {
                         finalList.add(currentFormula);
                     }
                 }
-                System.out.println(finalList);
                 final SwingNode swingNode = new SwingNode();
+                System.out.println("LISTA DE FORMULAS"+newList);
                 createSwingContentAtoms(swingNode,newList);
                 Tab tab = new Tab("Graph " + String.valueOf(numGraph));
                 tab.setContent(swingNode);
@@ -385,7 +387,9 @@ public class Controller {
                 ReadTxt txt = new ReadTxt(strPath);
                 System.out.println(strPath);
                 try {
-                    EpistemicModel model = new EpistemicModel(txt.buildWorldSet(),txt.buildRelationSet(txt.buildWorldSet()));
+                    WorldSet worldSet = txt.buildWorldSet();
+                    RelationSet relationSet = txt.buildRelationSet(worldSet);
+                    EpistemicModel model = new EpistemicModel(worldSet, relationSet);
                     swingNode.setContent(graph.createGraphAtoms(model, newList));
                 } catch (IOException e) {
                     e.printStackTrace();

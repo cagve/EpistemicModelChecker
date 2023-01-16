@@ -146,6 +146,7 @@ public class CreateGraph {
             String formulasToAdd = "";
 			currentWorld="w"+String.valueOf(i);
 			for(int j=0;j<list.size();j++) {
+                reasoner.ModelReasoner(list.get(j), model);
                 System.out.println("===="+list.get(j));
                 World newWorld = model.getWorldByName(currentWorld);
                 System.out.println(newWorld.getFormulaList());
