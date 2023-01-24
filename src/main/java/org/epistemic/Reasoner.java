@@ -188,7 +188,6 @@ public class Reasoner {
             boolean value = this.WorldReasoner(formulaFinal, model, worldSet.getWorldSet().get(y));
             result = result + "The formula " + t.convertNormal(formula) + " is "
                     + value + " in " + world.getName() ;
-            // SI ES FALSO Y ADEMAS ES KNOW REQUIERE EXPLICACION
             if (!value && formulaFinal.getClass() == know.getClass()){
                 know = (Knowledge) formulaFinal;
                 char agent = know.getAgent();
@@ -202,7 +201,11 @@ public class Reasoner {
             }else if (value && formulaFinal.getClass() == know.getClass()){
                 know = (Knowledge) formulaFinal;
                 char agent = know.getAgent();
-                result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent)+" and "+t.convertNormal(know.getFormula().toString())+" is true in those worlds.\n";
+				if(model.getAccWorld(world,agent).getWorldSet().size() < 1){
+					result = result + " because agent "+agent+" does not access any world.\n";
+				}else{
+					result = result + " because agent "+agent+" accesses to "+model.getAccWorld(world,agent).getWorldSetString()+" and "+t.convertNormal(know.getFormula().toString())+" is true in those worlds.\n";
+				}
             } else if(value && formulaFinal.getClass() == posKnow.getClass()){
                 posKnow = (PosKnowledge) formulaFinal;
                 char agent = posKnow.getAgent();
@@ -214,8 +217,13 @@ public class Reasoner {
                     }
                 }
             } else if(!value && formulaFinal.getClass() == posKnow.getClass()){
-                char agent = know.getAgent();
-                result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent)+" and "+t.convertNormal(know.getFormula().toString())+" is false in those worlds.\n";
+                posKnow = (PosKnowledge) formulaFinal;
+                char agent = posKnow.getAgent();
+				if(model.getAccWorld(world,agent).getWorldSet().size() < 1){
+					result = result + " because agent "+agent+" does not access any world.\n";
+				}else{
+					result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent).getWorldSetString()+" and "+t.convertNormal(know.getFormula().toString())+" is false in those worlds.\n";
+				}
             }else{
                 result = result + "\n";
             }
