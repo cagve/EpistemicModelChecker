@@ -77,7 +77,7 @@ public class Reasoner {
                         };
                     } else if (currentFormula.getClass() == imp.getClass()) {
                         imp = (Implication) currentFormula;
-                        if (!world.containsTrueFormula(imp.getFormulas().getFirst()) || world.containsTrueFormula(imp.getFormulas().getSecond())){
+                        if (!(world.containsTrueFormula(imp.getFormulas().getFirst()) && !world.containsTrueFormula(imp.getFormulas().getSecond()))){
                             world.addTrueFormula(currentFormula);
                         };
                     } else if (currentFormula.getClass() == eq.getClass()) {
@@ -202,7 +202,7 @@ public class Reasoner {
             }else if (value && formulaFinal.getClass() == know.getClass()){
                 know = (Knowledge) formulaFinal;
                 char agent = know.getAgent();
-                result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent)+" and "+t.convertNormal(know.getFormula().toString())+" is true in those worlds.\n";
+                result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent).getName()+" and "+t.convertNormal(know.getFormula().toString())+" is true in those worlds.\n";
             } else if(value && formulaFinal.getClass() == posKnow.getClass()){
                 posKnow = (PosKnowledge) formulaFinal;
                 char agent = posKnow.getAgent();
@@ -214,8 +214,8 @@ public class Reasoner {
                     }
                 }
             } else if(!value && formulaFinal.getClass() == posKnow.getClass()){
-                char agent = know.getAgent();
-                result = result + " because agent "+agent+" accesses "+model.getAccWorld(world,agent)+" and "+t.convertNormal(know.getFormula().toString())+" is false in those worlds.\n";
+                char agent = posKnow.getAgent();
+                result = result + " because aaaaaaaaaaaaaaaaaaaaaaaaaagent "+agent+" accesses "+model.getAccWorld(world,agent).getWorldSet().get(0).getName()+" and "+t.convertNormal(know.getFormula().toString())+" is false in those worlds.\n";
             }else{
                 result = result + "\n";
             }
