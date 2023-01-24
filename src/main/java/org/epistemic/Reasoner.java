@@ -77,7 +77,7 @@ public class Reasoner {
                         };
                     } else if (currentFormula.getClass() == imp.getClass()) {
                         imp = (Implication) currentFormula;
-                        if (!world.containsTrueFormula(imp.getFormulas().getFirst()) || world.containsTrueFormula(imp.getFormulas().getSecond())){
+                        if (!(world.containsTrueFormula(imp.getFormulas().getFirst()) && !world.containsTrueFormula(imp.getFormulas().getSecond()))){
                             world.addTrueFormula(currentFormula);
                         };
                     } else if (currentFormula.getClass() == eq.getClass()) {
