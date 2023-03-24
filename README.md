@@ -29,7 +29,7 @@ If you want to download the code and compile it, you will need the last version 
 
 ### Installation <a name="install"></a>
 
-Download the **EMC** installer for your operating system in: [Downloads](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1).
+Download the **EMC** installer for your operating system in: [Downloads](https://github.com/cagve/EpistemicModelChecker/releases/tag/v2).
 
 
 ## Use <a name="manual"></a>
