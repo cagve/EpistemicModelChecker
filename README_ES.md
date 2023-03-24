@@ -32,7 +32,7 @@ Para descargar y compilar el código se requiere además de la última versión 
 
 ### Instalación<a name="install"></a>
 
-Para instalar **EMC** basta con descargar el archivo correspondiente para su sistema operativo en el siguiente enlace; [Descargar instaladores](https://github.com/cagve/EpistemicModelChecker/releases/tag/v1).
+Para instalar **EMC** basta con descargar el archivo correspondiente para su sistema operativo en el siguiente enlace; [Descargar](https://github.com/cagve/EpistemicModelChecker/releases/tag/v2).
 
 
 ## Manual de uso <a name="manual"></a>
